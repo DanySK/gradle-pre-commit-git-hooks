@@ -1,0 +1,25 @@
+[versions]
+konf = "1.1.2"
+kotest = "4.6.4"
+kotlin = "1.6.10"
+mockito = "4.2.0"
+
+[libraries]
+classgraph = "io.github.classgraph:classgraph:4.8.138"
+konf-yaml = { module = "com.uchuhimo:konf-yaml", version.ref = "konf" }
+kotest-junit5-jvm = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
+kotest-assertions-core-jvm = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+
+[bundles]
+kotlin-testing = [ "kotest-junit5-jvm", "kotest-assertions-core-jvm", "mockito-core" ]
+
+[plugins]
+dokka = { id = "org.jetbrains.dokka", version.ref = "kotlin" }
+gitSemVer = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "0.3.0" }
+gradlePluginPublish = { id = "com.gradle.plugin-publish", version = "0.19.0" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.9.0" }
+multiJvmTesting = { id = "org.danilopianini.multi-jvm-test-plugin", version = "0.3.3" }
+publishOnCentral = { id = "org.danilopianini.publish-on-central", version = "0.7.9" }
+taskTree = { id = "com.dorongold.task-tree", version = "2.1.0" }
