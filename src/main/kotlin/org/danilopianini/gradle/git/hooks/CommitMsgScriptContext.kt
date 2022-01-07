@@ -2,8 +2,16 @@ package org.danilopianini.gradle.git.hooks
 
 import java.net.URL
 
+/**
+ * Specialized hook context for commit-msg.
+ */
 class CommitMsgScriptContext : CommonScriptContext("commit-msg") {
 
+    /**
+     * Pre-configures the commit-msg script to check for a valid
+     * [conventional commit](https://www.conventionalcommits.org/)
+     * message.
+     */
     fun conventionalCommits(configuration: ConventionalCommitsContext.() -> Unit = { defaultTypes() }) {
         val types = object : ConventionalCommitsContext {
             override var types = super.types
@@ -21,6 +29,6 @@ class CommitMsgScriptContext : CommonScriptContext("commit-msg") {
     }
 
     companion object {
-        private val SCRIPT_PATH = "org/danilopianini/gradle/git/hooks/conventional-commit-message.sh"
+        private const val SCRIPT_PATH = "org/danilopianini/gradle/git/hooks/conventional-commit-message.sh"
     }
 }

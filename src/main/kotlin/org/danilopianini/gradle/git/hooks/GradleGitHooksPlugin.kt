@@ -5,7 +5,7 @@ import org.gradle.api.initialization.Settings
 import org.gradle.kotlin.dsl.create
 
 /**
- * Just a template.
+ * Creates support for the hooks.
  */
 open class GradleGitHooksPlugin : Plugin<Any> {
     override fun apply(settings: Any) {

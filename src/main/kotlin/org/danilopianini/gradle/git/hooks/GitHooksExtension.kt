@@ -4,10 +4,17 @@ import org.gradle.api.initialization.Settings
 import java.io.File
 import java.io.Serializable
 
+/**
+ * DSL entry point, to be applied to [settings].gradle.kts.
+ */
 open class GitHooksExtension(val settings: Settings) : Serializable {
 
     private var hooks: Map<String, String> = emptyMap()
 
+    /**
+     * The git repository root. If unset, it will be searched recursively from the project root towards the
+     * filesystem root.
+     */
     var path: File? = null
         get() =
             field ?: requireNotNull(generateSequence(settings.settingsDir) { it.parentFile }.find { it.isGitRoot() }) {
@@ -21,14 +28,27 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
         hooks = hooks + (context.name to context.apply(configuration).script)
     }
 
+    /**
+     * Defines a new hook with an arbitrary name.
+     */
     fun hook(hookName: String, configuration: ScriptContext.() -> Unit) =
         hook(CommonScriptContext(hookName), configuration)
 
+    /**
+     * Pre-commit hook.
+     */
     fun preCommit(configuration: ScriptContext.() -> Unit) = hook("pre-commit", configuration)
 
+    /**
+     * Commit-msg hook.
+     */
     fun commitMsg(configuration: CommitMsgScriptContext.() -> Unit): Unit =
         hook(CommitMsgScriptContext(), configuration)
 
+    /**
+     * To be called to force the hook creation in case of necessity.
+     * If passed `true`, overwrites in case the script is already present and different than expected.
+     */
     fun createHooks(overwriteExisting: Boolean = false) {
         val root = requireNotNull(path?.takeIf { it.isGitRoot() }) {
             "${path?.absolutePath} is not a valid git root"
@@ -63,6 +83,10 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
 
     companion object {
         private const val serialVersionUID = 1L
+
+        /**
+         * Extension name.
+         */
         const val name: String = "gitHooks"
 
         private fun String.withMargins() = lines().joinToString(separator = "\n|", prefix = "|")
