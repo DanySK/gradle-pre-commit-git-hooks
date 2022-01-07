@@ -17,13 +17,13 @@ plugins {
  * Project information
  */
 group = "org.danilopianini"
-description = "A template repository for kickstarting Gradle Plugins"
+description = "A Gradle plugin enforcing pre-commit and commit-msg Git hooks configuration. Conventional-commits-ready."
 inner class ProjectInfo {
-    val longName = "Template for Gradle Plugins"
+    val longName = "Gradle pre-commit Git Hooks"
     val website = "https://github.com/DanySK/$name"
     val scm = "git@github.com:DanySK/$name.git"
-    val pluginImplementationClass = "$group.template.HelloGradle"
-    val tags = listOf("template", "kickstart", "example")
+    val pluginImplementationClass = "$group.gradle.git.hooks.GradleGitHooksPlugin"
+    val tags = listOf("git", "hook", "git hooks", "conventional commits")
 }
 val info = ProjectInfo()
 
@@ -74,6 +74,14 @@ configurations.all {
         if (requested.group == "org.jetbrains.kotlin" && requested.name.startsWith("kotlin")) {
             useVersion(KOTLIN_VERSION)
             because("All Kotlin modules should use the same version, and compiler uses $KOTLIN_VERSION")
+        }
+    }
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir("src/main/sh")
         }
     }
 }

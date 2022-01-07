@@ -10,5 +10,5 @@ gradleEnterprise {
     }
 }
 
-rootProject.name = "Template-for-Gradle-Plugins"
+rootProject.name = "gradle-pre-commit-git-hooks"
 enableFeaturePreview("VERSION_CATALOGS")

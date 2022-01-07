@@ -1,0 +1,19 @@
+tests:
+  - description: "Hooks should be created"
+    configuration:
+      tasks: tasks
+    expectation:
+      file_exists:
+        - name: .git/hooks/commit-msg
+          findRegex: .*list of Conventional Commits types$
+        - name: .git/hooks/commit-msg
+          findRegex: .*fix feat build chore ci docs perf refactor revert style test.*
+        - name: .git/hooks/pre-commit
+          content: |
+            #!/usr/bin/env bash
+            set -e
+            ./gradlew ktlintCheck
+            set +e
+
+        - name: .git/hooks/pre-commit
+          findRegex: ^#!/usr/bin/env bash$

@@ -1,4 +1,4 @@
-package org.danilopianini.template.test
+package org.danilopianini.gradle.git.hooks.test
 
 import com.uchuhimo.konf.Config
 import com.uchuhimo.konf.source.yaml
@@ -60,10 +60,11 @@ class Tests : StringSpec(
                         result.outcomeOf(it) shouldBe TaskOutcome.FAILED
                     }
                     test.expectation.file_exists.forEach {
-                        with(File("${testFolder.root.absolutePath}/$it")) {
+                        val file = File("${testFolder.root.absolutePath}/${it.name}").apply {
                             shouldExist()
                             shouldBeAFile()
                         }
+                        it.validate(file)
                     }
                 }
             }
