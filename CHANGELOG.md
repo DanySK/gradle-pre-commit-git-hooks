@@ -1,3 +1,10 @@
+### [1.0.1](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.0...1.0.1) (2022-01-07)
+
+
+### Bug Fixes
+
+* do not crash the build in case old scripts exist ([8aeecce](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8aeeccec795fac6e1071aaaba7a5232e2549f43c))
+
 ## 1.0.0 (2022-01-07)
 
 
