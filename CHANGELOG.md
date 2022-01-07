@@ -1,3 +1,10 @@
+### [1.0.2](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.1...1.0.2) (2022-01-07)
+
+
+### Bug Fixes
+
+* warnings on scripts no longer print a spurious | ([e9ca98c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e9ca98c10426bd579c4950d514b9702643573ae1))
+
 ### [1.0.1](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.0...1.0.1) (2022-01-07)
 
 
