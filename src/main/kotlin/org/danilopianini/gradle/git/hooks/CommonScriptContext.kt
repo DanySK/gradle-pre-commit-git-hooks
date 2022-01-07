@@ -37,8 +37,8 @@ open class CommonScriptContext(override val name: String) : AbstractScriptContex
             then:
             
             ${
-                runCatching { script() }
-                    .getOrElse { "Something whose evaluation this error:\n${it.stackTraceToString()}" }
+            runCatching { script() }
+                .getOrElse { "Something whose evaluation this error:\n${it.stackTraceToString()}" }
             }
             """.trimIndent()
         }
@@ -47,7 +47,7 @@ open class CommonScriptContext(override val name: String) : AbstractScriptContex
 
     final override fun processTasks(vararg tasks: Any, requireSuccess: Boolean) {
         val names = tasks.map { task ->
-            when(task) {
+            when (task) {
                 is String -> task
                 is Task -> task.name
                 is TaskProvider<*> -> task.name

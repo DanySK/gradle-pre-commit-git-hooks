@@ -9,7 +9,7 @@ import org.gradle.kotlin.dsl.create
  */
 open class GradleGitHooksPlugin : Plugin<Any> {
     override fun apply(settings: Any) {
-        require (settings is Settings) {
+        require(settings is Settings) {
             """
             ${this::class.simpleName} is not meant to be applied manually. It should be applied to settings.gradle.kts:
             plugins {
