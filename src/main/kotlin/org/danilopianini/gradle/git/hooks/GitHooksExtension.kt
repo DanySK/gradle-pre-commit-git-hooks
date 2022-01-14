@@ -57,7 +57,7 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
             val hook = File(root.absolutePath, "/.git/hooks/$name")
             if (!hook.exists()) {
                 require(hook.createNewFile()) { "Cannot create file ${hook.absolutePath}" }
-                hook.writeText(script)
+                hook.writeScript(script)
             } else {
                 val oldScript = hook.readText()
                 if (oldScript != script) {
@@ -74,7 +74,7 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
                     )
                     if (overwriteExisting) {
                         println("WARNING: Overwriting git hook $name")
-                        hook.writeText(script)
+                        hook.writeScript(script)
                     }
                 }
             }
@@ -90,6 +90,11 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
         const val name: String = "gitHooks"
 
         private fun String.withMargins() = lines().joinToString(separator = "\n|", prefix = "|")
+
+        private fun File.writeScript(script: String) {
+            writeText(script)
+            setExecutable(true)
+        }
 
         private fun File.isGitRoot(): Boolean = listFiles()
             ?.any { folder ->
