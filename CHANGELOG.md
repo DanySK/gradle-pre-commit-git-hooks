@@ -1,3 +1,29 @@
+### [1.0.3](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.2...1.0.3) (2022-01-14)
+
+
+### Bug Fixes
+
+* assign execute permission to the generated hooks (fixes [#10](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/10)) ([53e5428](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/53e5428065d5d1457c3ce4075fd8c325c1afd0ef))
+
+
+### Dependency updates
+
+* **deps:** update plugin com.gradle.enterprise to v3.8.1 ([1f14cf1](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1f14cf15ef9a101a31e7286531ceee37e6bdb241))
+* **deps:** update plugin multijvmtesting to v0.3.4 ([0c12610](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/0c12610c0f51c4585a85849805aea8bc7b9d0f0e))
+* **deps:** update plugin publishoncentral to v0.7.11 ([885d201](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/885d2017307c26fd40487bef94a0c1fd11722edc))
+
+
+### Tests
+
+* reproduce issue [#10](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/10) ([6b58f13](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6b58f13d64d7ef06bfdd1af9a25324a0af754ac9))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.1.3 ([4326b38](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/4326b38de5db9fe2677c763cc67cfc8cec848b35))
+* **release:** enable writing actions on the repository ([a23abb4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/a23abb448f349ce0cccf6e938f7aca890db99b8a))
+* use a dedicated token for deployment ([5d42b80](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5d42b80d4a3f27b822c040a8d916925ba47ad12b))
+
 ### [1.0.2](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.1...1.0.2) (2022-01-07)
 
 
