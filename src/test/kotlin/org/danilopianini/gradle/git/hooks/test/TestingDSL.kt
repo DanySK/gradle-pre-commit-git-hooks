@@ -23,11 +23,20 @@ data class Expectation(
     val output_contains: List<String> = emptyList()
 )
 
+enum class Permission(private val hasPermission: File.() -> Boolean) {
+    R(File::canRead), W(File::canWrite), X(File::canExecute);
+
+    fun requireOnFile(file: File) = require(file.hasPermission()) {
+        "File ${file.absolutePath} must have permission $name, but it does not."
+    }
+}
+
 data class ExistingFile(
     val name: String,
     val findRegex: String? = null,
     val content: String? = null,
     val trim: Boolean = false,
+    val permissions: List<Permission> = emptyList()
 ) {
     fun validate(actualFile: File): Unit = with(actualFile) {
         require(exists()) {
@@ -59,5 +68,6 @@ data class ExistingFile(
                 """.trimIndent()
             }
         }
+        permissions.forEach { it.requireOnFile(this) }
     }
 }
