@@ -2,7 +2,7 @@
 konf = "1.1.2"
 kotest = "4.6.4"
 kotlin = "1.6.10"
-mockito = "4.2.0"
+mockito = "4.3.1"
 
 [libraries]
 classgraph = "io.github.classgraph:classgraph:4.8.138"
