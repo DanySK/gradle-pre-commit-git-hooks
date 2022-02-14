@@ -5,7 +5,7 @@ kotlin = "1.6.10"
 mockito = "4.3.1"
 
 [libraries]
-classgraph = "io.github.classgraph:classgraph:4.8.138"
+classgraph = "io.github.classgraph:classgraph:4.8.139"
 konf-yaml = { module = "com.uchuhimo:konf-yaml", version.ref = "konf" }
 kotest-junit5-jvm = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
 kotest-assertions-core-jvm = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
