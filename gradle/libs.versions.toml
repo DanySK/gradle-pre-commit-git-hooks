@@ -1,6 +1,6 @@
 [versions]
 konf = "1.1.2"
-kotest = "5.2.1"
+kotest = "5.2.2"
 kotlin = "1.6.10"
 mockito = "4.4.0"
 
