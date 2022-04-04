@@ -91,7 +91,7 @@ kotlin {
         compilations.all {
             kotlinOptions {
                 allWarningsAsErrors = true
-                freeCompilerArgs = listOf("-XXLanguage:+InlineClasses", "-Xopt-in=kotlin.RequiresOptIn")
+                freeCompilerArgs = listOf("-XXLanguage:+InlineClasses", "-opt-in=kotlin.RequiresOptIn")
             }
         }
     }
