@@ -1,4 +1,5 @@
 [versions]
+dokka = "1.6.10"
 konf = "1.1.2"
 kotest = "5.2.2"
 kotlin = "1.6.10"
@@ -15,7 +16,7 @@ mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 kotlin-testing = [ "kotest-junit5-jvm", "kotest-assertions-core-jvm", "mockito-core" ]
 
 [plugins]
-dokka = { id = "org.jetbrains.dokka", version.ref = "kotlin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 gitSemVer = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "0.3.0" }
 gradlePluginPublish = { id = "com.gradle.plugin-publish", version = "0.21.0" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
