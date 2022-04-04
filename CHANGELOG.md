@@ -1,3 +1,21 @@
+### [1.0.7](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.6...1.0.7) (2022-04-04)
+
+
+### Dependency updates
+
+* **core-deps:** update plugin kotlin-jvm to v1.6.20 ([6819544](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/68195442a51042383a92eadb45e46f0b65ef5e8d))
+* **deps:** update plugin kotlin-qa to v0.14.1 ([603d127](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/603d12787e77ca09756c00142344288feeeed3e5))
+* **deps:** update plugin publishoncentral to v0.7.15 ([cb907bc](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/cb907bc19fd50b20cdf44626d91c1698b039b26a))
+* **deps:** update plugin publishoncentral to v0.7.16 ([49eb4e4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/49eb4e4d2db9b01ef25616d6e201b25134f1cd4f))
+
+
+### Build and continuous integration
+
+* '-Xopt-in' is deprecated, use '-opt-in' ([b1f3e6b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b1f3e6bbb72dee8da9d17fd23501c57977cee361))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.8 ([5f7ed4b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5f7ed4bb2ad77c8f03e44253528a58f58e71eb6e))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.9 ([7f64ed2](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7f64ed20c0f228882d43e2663f184d45ffc90915))
+* split versions of Kotlin and Dokka ([8a299fb](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8a299fbef672fee2b4b733a52982ce28e618fad2))
+
 ### [1.0.6](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.5...1.0.6) (2022-03-31)
 
 
