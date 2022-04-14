@@ -1,3 +1,21 @@
+### [1.0.8](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.7...1.0.8) (2022-04-14)
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.10 ([6695db1](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6695db1f973cedfd7483c57ae209c1b71fa9a81b))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.11 ([bc62d10](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/bc62d10b812fa7784b4b9f999dbd7147457f508f))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.12 ([839c449](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/839c449f27f287bc0146292f3114f3f16913cd9a))
+
+
+### Dependency updates
+
+* **core-deps:** update plugin dokka to v1.6.20 ([4623e93](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/4623e93e7c5a776b5e0d91537375d50a8df4205f))
+* **deps:** update io.kotest to v5.2.3 ([5f4f61b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5f4f61bbc4b32c40e4f4a38f81d46e8f8ca411d9))
+* **deps:** update plugin kotlin-qa to v0.14.2 ([85f3f81](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/85f3f81e3b42267f338b24781aab6438c7d4f70e))
+* **deps:** update plugin kotlin-qa to v0.15.0 ([d331a7f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/d331a7faca24d359ff39cae26d58f101e33569f4))
+* **deps:** update plugin multijvmtesting to v0.3.5 ([fa38c39](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fa38c3936ceb2ec4613e7c8af21abf05ef1fac50))
+
 ### [1.0.7](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.6...1.0.7) (2022-04-04)
 
 
