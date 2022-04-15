@@ -16,6 +16,7 @@ data class Test(
 
 data class Configuration(val tasks: List<String>, val options: List<String> = emptyList())
 
+@Suppress("ConstructorParameterNaming")
 data class Expectation(
     val file_exists: List<ExistingFile> = emptyList(),
     val success: List<String> = emptyList(),
