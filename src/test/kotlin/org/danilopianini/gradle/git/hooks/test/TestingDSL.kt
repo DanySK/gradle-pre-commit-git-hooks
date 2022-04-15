@@ -11,7 +11,7 @@ object Root : ConfigSpec("") {
 data class Test(
     val description: String,
     val configuration: Configuration,
-    val expectation: Expectation
+    val expectation: Expectation,
 )
 
 data class Configuration(val tasks: List<String>, val options: List<String> = emptyList())
@@ -20,7 +20,7 @@ data class Expectation(
     val file_exists: List<ExistingFile> = emptyList(),
     val success: List<String> = emptyList(),
     val failure: List<String> = emptyList(),
-    val output_contains: List<String> = emptyList()
+    val output_contains: List<String> = emptyList(),
 )
 
 enum class Permission(private val hasPermission: File.() -> Boolean) {
@@ -36,7 +36,7 @@ data class ExistingFile(
     val findRegex: String? = null,
     val content: String? = null,
     val trim: Boolean = false,
-    val permissions: List<Permission> = emptyList()
+    val permissions: List<Permission> = emptyList(),
 ) {
     fun validate(actualFile: File): Unit = with(actualFile) {
         require(exists()) {
