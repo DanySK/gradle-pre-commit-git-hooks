@@ -1,3 +1,28 @@
+### [1.0.9](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.8...1.0.9) (2022-04-19)
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.0.1 ([3190a79](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/3190a795bb1123f9da9a73fd3dbf5619163719d8))
+
+
+### Style improvements
+
+* add trailing commas ([1fbc717](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1fbc71747a6b20963bd2af9665bf489c9a8c69a2))
+* suppress ConstructorParameterNaming over data class meant to interoperate with YAML ([a4447b8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/a4447b82960aeed7e169d7133f79535b5a0dde20))
+
+
+### Dependency updates
+
+* **core-deps:** update plugin kotlin-jvm to v1.6.21 ([6bc15be](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6bc15be058de16a276b9a952aa6afee7f08ed75b))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.145 ([f90aee9](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f90aee943a6f2fa264f05f0325c34bd5780f2cb2))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.146 ([d58692f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/d58692f158e4db5657011a1a4df13ddda8fef989))
+* **deps:** update plugin com.gradle.enterprise to v3.10 ([f71f071](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f71f071cc075f205d9dfa3dd5edd91e54265dfbb))
+* **deps:** update plugin kotlin-qa to v0.15.1 ([a449c99](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/a449c99f5f2f26241a9710701cd229534b263226))
+* **deps:** update plugin kotlin-qa to v0.16.0 ([3fca6c4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/3fca6c4ac0441464b0dbb507ef4d3cd46b1f1ba4))
+* **deps:** update plugin multijvmtesting to v0.3.6 ([df4b8e7](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/df4b8e7e330f5155d7f8ae63a3cf1714210543d0))
+* **deps:** update plugin publishoncentral to v0.7.17 ([393411b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/393411b27311a0cf39e1aa451c03b912d825c56e))
+
 ### [1.0.8](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.7...1.0.8) (2022-04-14)
 
 
