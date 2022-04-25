@@ -1,3 +1,25 @@
+### [1.0.10](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.9...1.0.10) (2022-04-25)
+
+
+### Tests
+
+* **deps:** remove dependency on mockito ([06ea7f6](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/06ea7f64b7101d2e6947d7dcccbbdb6ecd3f7b6b))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.0.2 ([02ee160](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/02ee160e16e611198d32b795b4b106fa1ed00062))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.13 ([1a8ecaf](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1a8ecaf122fb3b8f7f12cf7255548434759b83d3))
+* manage concurrency at the jobs level ([91cf245](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/91cf2455fde2edc21fa8888088767c304abcf196))
+
+
+### Dependency updates
+
+* **core-deps:** update plugin dokka to v1.6.21 ([15cbcb2](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/15cbcb22444d65ea16b238f1adfeaf9dae4faa0c))
+* **deps:** update dependency org.mockito:mockito-core to v4.5.0 ([2e52b1b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2e52b1b776912e7271c821329bcca4fadd8f8683))
+* **deps:** update plugin kotlin-qa to v0.16.1 ([e51e8eb](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e51e8ebce0b69f3dac507e8d0eee55be7237dbbd))
+* **deps:** update plugin publishoncentral to v0.7.18 ([1778c05](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1778c053e92f7ee1448ee8810353d5cf95b8a375))
+
 ### [1.0.9](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.8...1.0.9) (2022-04-19)
 
 
