@@ -25,6 +25,31 @@ body:
       required: true
 
   - type: textarea
+    id: build-config
+    attributes:
+      label: plugin-configuration
+      description: |
+        Please paste the plugin configuration you are using
+      value: |
+        <details><summary>Gradle Settings</summary>
+
+        ```kotlin
+        Copy/paste your settings.gradle.kts here, between the starting and ending backticks
+        ```
+
+        </details>
+        
+        <details><summary>Gradle Build Config</summary>
+
+        ```kotlin
+        Copy/paste your build.gradle.kts here, between the starting and ending backticks
+        ```
+
+        </details>
+    validations:
+      required: true
+
+  - type: textarea
     id: build-scan
     attributes:
       label: Gradle build scan and relevant logs
