@@ -1,0 +1,56 @@
+name: Bug report
+description: You've found a bug with Renovate.
+labels: ['bug', 'triage needed']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before you begin to fill out the form, make sure you have actually found a bug.
+
+  - type: dropdown
+    id: regression-error
+    attributes:
+      label: Was this something which used to work for you, and then stopped?
+      options:
+        - 'It used to work, and then stopped'
+        - 'I never saw this working'
+    validations:
+      required: true
+
+  - type: textarea
+    id: describe-bug
+    attributes:
+      label: Describe the bug
+    validations:
+      required: true
+
+  - type: textarea
+    id: build-scan
+    attributes:
+      label: Gradle build scan and relevant logs
+      description: |
+        Please attach a build scan of the bug happening when running Gradle.
+        You can obtain build scan link by using the `--scan` option
+      value: |
+        [Gradle build scan](LINK HERE)
+        
+        <details><summary>Further relevant logs</summary>
+
+        ```
+        Copy/paste the relevant log(s) here, between the starting and ending backticks
+        ```
+
+        </details>
+    validations:
+      required: true
+
+  - type: dropdown
+    id: minimal-reproduction-repository
+    attributes:
+      label: Have you created a minimal reproduction repository?
+      options:
+        - 'I have linked to a minimal reproduction repository in the bug description'
+        - 'No reproduction, but I have linked to a public repo where it occurs'
+        - 'No reproduction repository'
+    validations:
+      required: true
