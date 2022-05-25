@@ -1,5 +1,5 @@
 name: Bug report
-description: You've found a bug with Renovate.
+description: You've found a bug with the project.
 labels: ['bug', 'triage needed']
 body:
   - type: markdown
