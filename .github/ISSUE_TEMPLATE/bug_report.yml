@@ -27,7 +27,7 @@ body:
   - type: textarea
     id: build-config
     attributes:
-      label: plugin-configuration
+      label: Your configuration
       description: |
         Please paste the plugin configuration you are using
       value: |
