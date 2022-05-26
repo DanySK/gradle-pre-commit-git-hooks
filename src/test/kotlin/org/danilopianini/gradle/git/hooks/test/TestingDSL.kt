@@ -22,6 +22,7 @@ data class Expectation(
     val success: List<String> = emptyList(),
     val failure: List<String> = emptyList(),
     val output_contains: List<String> = emptyList(),
+    val post_run_script: List<String> = emptyList(),
 )
 
 enum class Permission(private val hasPermission: File.() -> Boolean) {

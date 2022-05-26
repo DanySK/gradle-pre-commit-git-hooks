@@ -8,12 +8,15 @@ import io.kotest.matchers.file.shouldBeAFile
 import io.kotest.matchers.file.shouldExist
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldContain
+import org.gradle.internal.hash.Hashing
 import org.gradle.internal.impldep.org.junit.rules.TemporaryFolder
 import org.gradle.testkit.runner.BuildResult
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
 import org.slf4j.LoggerFactory
 import java.io.File
+import java.util.concurrent.TimeUnit
+import java.util.regex.Pattern
 
 class Tests : StringSpec(
     {
@@ -66,12 +69,35 @@ class Tests : StringSpec(
                         }
                         it.validate(file)
                     }
+                    test.expectation.post_run_script.takeIf { it.isNotEmpty() }?.also { postRuns ->
+                        findShell()?.also { shell ->
+                            postRuns.forEach { postRun ->
+                                val hash = Hashing.sha512().hashString(postRun)
+                                val fileName = "post-run-$hash.sh"
+                                with(File(testFolder.root, fileName)) {
+                                    writeText(postRun)
+                                    setExecutable(true)
+                                }
+                                val process = ProcessBuilder()
+                                    .directory(testFolder.root)
+                                    .command(shell, fileName)
+                                    .start()
+                                val finished = process.waitFor(10, TimeUnit.SECONDS)
+                                finished shouldBe true
+                                log.debug(process.inputStream.bufferedReader().use { it.readText() })
+                                process.exitValue() shouldBe 0
+                            }
+                        } ?: log.warn(
+                            "No known Unix shell available on this system! Tests with scripts won't be executed"
+                        )
+                    }
                 }
             }
     }
 ) {
     companion object {
         val log = LoggerFactory.getLogger(Tests::class.java)
+        private val shells = listOf("sh", "bash", "zsh", "fish", "csh", "ksh")
 
         private fun BuildResult.outcomeOf(name: String) = task(":$name")
             ?.outcome
@@ -80,6 +106,16 @@ class Tests : StringSpec(
         private fun folder(closure: TemporaryFolder.() -> Unit) = TemporaryFolder().apply {
             create()
             closure()
+        }
+
+        private fun findShell(): String? {
+            val paths = System.getenv("PATH").split(Regex(Pattern.quote(File.pathSeparator)))
+            return shells.find { shell ->
+                paths.any { path ->
+                    val executable = File(File(path), shell)
+                    executable.exists() && executable.canExecute()
+                }
+            }
         }
     }
 }

@@ -1,0 +1,5 @@
+fix(trigger): `use` trigger not work correctly
+
+- `predicateService` not injected
+- `Slot#offer` won't replace item
+- `ServerWorld` not in the `Cause`

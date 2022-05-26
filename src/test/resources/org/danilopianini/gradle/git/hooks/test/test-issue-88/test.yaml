@@ -1,0 +1,19 @@
+tests:
+  - description: "Commit message from https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/88 should be valid"
+    configuration:
+      tasks: tasks
+    expectation:
+      file_exists:
+        - name: .git/hooks/commit-msg
+          findRegex: .*list of Conventional Commits types$
+          permissions: X
+        - name: .git/hooks/commit-msg
+          findRegex: .*fix feat build chore ci docs perf refactor revert style test.*
+          permissions: X
+      post_run_script: |
+        git init
+        git config user.name "Gradle Test bot"
+        git config user.email "noreply@danysk.github.io"
+        touch foo
+        git add foo
+        git commit -F commit_message
