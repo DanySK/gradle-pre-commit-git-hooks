@@ -1,3 +1,45 @@
+### [1.0.11](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.10...1.0.11) (2022-05-26)
+
+
+### Bug Fixes
+
+* fix bug [#88](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/88) ([dbf6c52](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/dbf6c5223f2893a7fb4739ea15038e3ae784cfe3))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.14 ([1c86469](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1c864691c7bf99fd0c4848c54373f3a556817e68))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.15 ([dc00ab4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/dc00ab4a3bd28ebcec67d39fe5a665d6f654d1e5))
+
+
+### Dependency updates
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.147 ([083c000](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/083c000f6158f53aa097ede07098b19b0762e4ba))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.6 ([f2f4515](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f2f4515f6acb3bd509d72eb2afbd7b05cd9fa4a1))
+* **deps:** update io.kotest to v5.3.0 ([eaa8ce7](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/eaa8ce7f0e1e5d139139eb42d7fcdfcbe0e39159))
+* **deps:** update node.js to 16.15 ([7204c07](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7204c07e88b86af7d443c49f2117e4726fd418b2))
+* **deps:** update plugin com.gradle.enterprise to v3.10.1 ([5a97a9e](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5a97a9ecbac4f200e71a587d9682c7952f6636a7))
+* **deps:** update plugin kotlin-qa to v0.16.2 ([986066c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/986066c11cdeac29740441556c2f9faab78c2478))
+* **deps:** update plugin kotlin-qa to v0.17.0 ([3469478](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/346947836861fe29f004176ffc625ef81604281c))
+* **deps:** update plugin kotlin-qa to v0.18.0 ([8792e25](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8792e253303de4a516d02a2b85ee461232c8ec51))
+* **deps:** update plugin multijvmtesting to v0.3.7 ([38d7a09](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/38d7a09fecd4e613a8ee9e136720165edd511e8c))
+* **deps:** update plugin multijvmtesting to v0.4.0 ([95ac805](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/95ac805e89daa3c75996dc4690eb7ca4f7618122))
+* **deps:** update plugin publishoncentral to v0.7.19 ([27f18aa](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/27f18aa7bb2f0c83783a8669efa0e13d7be15f40))
+
+
+### General maintenance
+
+* create feature request bug template ([c3e05bd](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c3e05bd94cdf49a967ae7d94e9b4af7387348461))
+* create pull request template ([01a58d4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/01a58d441c12ba95f82ae828362fd44104578c8a))
+* remove reference to renovate in bug template ([0218505](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/021850504bcd1572c5e0ca1ece0c5918eb22f0ba))
+* **repo:** fix label in issue template ([aeeb7a1](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/aeeb7a10530338bb5d144ba918117b017ce03e35))
+* **repository:** force bug reporters to paste their config ([6c8fc0c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6c8fc0ce6ca272c7b6d7406caa8aba4e05d30534))
+
+
+### Tests
+
+* add regression test for [#88](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/88) ([d57ec42](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/d57ec42d8a95bbd2023f0c4f2c50b221e2f7f270))
+
 ### [1.0.10](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.9...1.0.10) (2022-04-25)
 
 
