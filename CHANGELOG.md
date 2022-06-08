@@ -1,3 +1,21 @@
+## [1.0.12](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.11...1.0.12) (2022-06-08)
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v1.2.16 ([cf4f6bc](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/cf4f6bc3eb4c467ea1faeaf7e0f9ed09f8c22c4b))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2 ([08f8088](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/08f8088d2def78b2712866c32d216b662a22d534))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.0.1 ([fac0adf](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fac0adf7064e616b53dc82f45d6d18ab07833eef))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.0.2 ([b8288b9](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b8288b9229197f472512fc1975f70cf0233cf790))
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.7.0 ([da22b8d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/da22b8dcd0477803900838e23dfe65d9feb5b708))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.7 ([9931b38](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/9931b38e59ef6345194724ee7506155e8a83eac1))
+* **deps:** update plugin kotlin-qa to v0.19.0 ([9a1d524](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/9a1d524dbafdfb7b6d0d1670bcd1e78e121d1a2f))
+* **deps:** update plugin publishoncentral to v0.8.0 ([7d9a779](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7d9a779aabb37cb8f44975bd4f03ebef4be96738))
+
 ### [1.0.11](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.10...1.0.11) (2022-05-26)
 
 
