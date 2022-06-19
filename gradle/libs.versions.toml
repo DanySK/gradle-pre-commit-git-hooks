@@ -1,5 +1,5 @@
 [versions]
-dokka = "1.6.21"
+dokka = "1.7.0"
 konf = "1.1.2"
 kotest = "5.3.0"
 kotlin = "1.7.0"
