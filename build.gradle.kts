@@ -153,7 +153,7 @@ pluginBundle {
 
 gradlePlugin {
     plugins {
-        create("plugin-template") {
+        create("gitHooks") {
             id = "$group.${project.name}"
             displayName = info.longName
             description = project.description
