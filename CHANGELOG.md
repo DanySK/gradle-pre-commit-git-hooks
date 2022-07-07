@@ -1,3 +1,23 @@
+## [1.0.14](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.13...1.0.14) (2022-07-07)
+
+
+### Build and continuous integration
+
+* add dry-deployment test and fix the release process for publish-on-central 2.x.x ([75553d4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/75553d494e98d571fdb9bdd4a0e6fa978d9a51ca))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.0.3 ([442155d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/442155dd17f35651de6d7025bb8ed6276a0aa836))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.0 ([f12e285](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f12e285bad3030739f3f127af44cffbfcc84605b))
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.7.10 ([7d31e7a](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7d31e7ad66910930ccecb9aae3f1caeb43f702ec))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.148 ([b9ca8c3](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b9ca8c38f745923f9e3a5697bf6b4780814e4f94))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.149 ([ce50d24](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/ce50d24844df8b0eb25b9a4fdb2df9c6e010ab98))
+* **deps:** update plugin gradlepluginpublish to v1 ([3ea385d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/3ea385d01cd5d2181ddb211b3cca72ff622ea285))
+* **deps:** update plugin multijvmtesting to v0.4.4 ([f3c9f76](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f3c9f764342ec36217fa5aafdb25b4815035d188))
+* **deps:** update plugin multijvmtesting to v0.4.5 ([686db6e](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/686db6ebf6f504ddbfc9c2d077f2273783a48a07))
+* **deps:** update plugin publishoncentral to v2 ([6c8b6cb](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6c8b6cbd23b7cc0dea117ac885cd242273fd03f8))
+
 ## [1.0.13](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.12...1.0.13) (2022-06-20)
 
 
