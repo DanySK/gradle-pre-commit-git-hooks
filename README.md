@@ -9,7 +9,6 @@ the hooks are generated automatically.
 ## Usage
 
 This plugin must be applied to `settings.gradle.kts`.
-Groovy syntax not supported.
 
 ```kotlin
 plugins {
@@ -19,6 +18,32 @@ plugins {
 gitHooks {
     // Configuration
     createHooks() // actual hooks creation
+}
+```
+
+The Groovy syntax is not officially supported.
+However, since Groovy can call Kotlin, it is still possible
+(though pretty cumbersome)
+to use the plugin from a Groovy `settings.gradle` file:
+
+```groovy
+plugins {
+    id('org.danilopianini.gradle-pre-commit-git-hooks') version '<version>'
+}
+
+gitHooks { extension ->
+    extension.with {
+        commitMsg { context ->
+            context.with {
+                conventionalCommits { conventionalCommits ->
+                    conventionalCommits.with {
+                        defaultTypes()
+                    }
+                }
+            }
+        }
+        createHooks(true)
+    }
 }
 ```
 
