@@ -24,11 +24,13 @@ if grep -Eq "$pattern" "$msg_file"; then
     exit 0
 fi
 
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-NC='\033[0m'
+if test -t 1 && test -n "$(tput colors)"; then 
+    RED='\033[0;31m'
+    GREEN='\033[0;32m'
+    BLUE='\033[0;34m'
+    PURPLE='\033[0;35m'
+    NC='\033[0m'
+fi
 
 echo -e "${RED}ERROR: Invalid commit message${NC}:
 ${PURPLE}$( cat "$msg_file" )${NC}
