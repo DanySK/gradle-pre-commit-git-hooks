@@ -1,3 +1,18 @@
+## [1.0.16](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.15...1.0.16) (2022-07-14)
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.2 ([15d0d56](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/15d0d56ba2f6472a1033d1821419684cf9683441))
+
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v7.5 ([486d2c5](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/486d2c57c2e539632a859b7b9c7b19fc90a590a6))
+* **deps:** update plugin kotlin-qa to v0.20.3 ([0c42b1a](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/0c42b1a300825ca23864302c46c0c8ded668a0be))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.15 ([35ae74a](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/35ae74aebb2d59b97999720fedd006d551ec6c4e))
+* **deps:** update plugin publishoncentral to v2.0.4 ([514a146](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/514a146b85613ec1f9beab7d90b7f6d190654940))
+
 ## [1.0.15](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.14...1.0.15) (2022-07-13)
 
 
