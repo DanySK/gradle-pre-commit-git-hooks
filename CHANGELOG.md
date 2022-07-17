@@ -1,3 +1,18 @@
+## [1.0.17](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.16...1.0.17) (2022-07-17)
+
+
+### Bug Fixes
+
+* **conventional-commits:** print colored output only if supported by the current terminal, fixes [#126](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/126) ([7a96621](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7a96621abf77fed45f4585bc12431069d0c2c993))
+
+
+### Dependency updates
+
+* **deps:** update kotest to v5.3.2 ([a1c608c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/a1c608c9936be4d1213c9d0c2062ce34942c8965))
+* **deps:** update plugin kotlin-qa to v0.20.4 ([0443722](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/0443722a93d38608c56c119928c37214fb0c69e1))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.16 ([4ad0038](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/4ad003836c4504a9bdfd5433308d7a47f836ef41))
+* **deps:** update plugin publishoncentral to v2.0.5 ([bfd9b30](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/bfd9b3099e4651dcff65a2d1b356a7b618f4a2e8))
+
 ## [1.0.16](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.15...1.0.16) (2022-07-14)
 
 
