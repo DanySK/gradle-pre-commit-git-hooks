@@ -20,12 +20,6 @@ import java.util.regex.Pattern
 
 class Tests : StringSpec(
     {
-        val pluginClasspathResource = ClassLoader.getSystemClassLoader()
-            .getResource("plugin-classpath.txt")
-            ?: throw IllegalStateException("Did not find plugin classpath resource, run \"testClasses\" build task.")
-        val classpath = pluginClasspathResource.openStream().bufferedReader().use { reader ->
-            reader.readLines().map { File(it) }
-        }
         val scan = ClassGraph()
             .enableAllInfo()
             .acceptPackages(Tests::class.java.`package`.name)
@@ -48,8 +42,8 @@ class Tests : StringSpec(
                 test.description {
                     val result = GradleRunner.create()
                         .withProjectDir(testFolder.root)
-                        .withPluginClasspath(classpath)
                         .withArguments(test.configuration.tasks + test.configuration.options)
+                        .withPluginClasspath()
                         .run { if (test.expectation.failure.isEmpty()) build() else buildAndFail() }
                     println(result.tasks)
                     println(result.output)
@@ -99,9 +93,9 @@ class Tests : StringSpec(
         val log = LoggerFactory.getLogger(Tests::class.java)
         private val shells = listOf("sh", "bash", "zsh", "fish", "csh", "ksh")
 
-        private fun BuildResult.outcomeOf(name: String) = task(":$name")
-            ?.outcome
-            ?: throw IllegalStateException("Task $name was not present among the executed tasks")
+        private fun BuildResult.outcomeOf(name: String) = requireNotNull(task(":$name")) {
+            "Task $name was not present among the executed tasks"
+        }.outcome
 
         private fun folder(closure: TemporaryFolder.() -> Unit) = TemporaryFolder().apply {
             create()

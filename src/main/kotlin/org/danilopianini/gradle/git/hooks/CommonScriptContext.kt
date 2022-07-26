@@ -51,9 +51,7 @@ open class CommonScriptContext(override val name: String) : AbstractScriptContex
                 is String -> task
                 is Task -> task.name
                 is TaskProvider<*> -> task.name
-                else -> throw IllegalStateException(
-                    "Object '$task' with type '${task::class.simpleName}' cannot produce valid task names"
-                )
+                else -> error("Object '$task' with type '${task::class.simpleName}' cannot produce valid task names")
             }
         }
         if (script.isEmpty()) {
