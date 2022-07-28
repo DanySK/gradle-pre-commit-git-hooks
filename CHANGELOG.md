@@ -1,3 +1,22 @@
+## [1.0.18](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.17...1.0.18) (2022-07-28)
+
+
+### Bug Fixes
+
+* **deps:** update kotest to v5.4.1 ([adf176d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/adf176d2d9ae2a6e3f7fcad7dd8ef1d91e510068))
+
+
+### Dependency updates
+
+* **deps:** update kotest to v5.4.0 ([2e9479d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2e9479dce2867309ad526231aa9fc4c02e349937))
+* **deps:** update plugin kotlin-qa to v0.22.0 ([23220a4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/23220a4dc8a95e0eb1689801ff905b5648a27b8b))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.17 ([1a7b0d3](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1a7b0d32aba9a1ad3d1db6f4923679b1dfed6d04))
+
+
+### Style improvements
+
+* use check() or error() instead of throwing an IllegalStateException ([b9d6dd8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b9d6dd8766c82b5c38636ed9858f347cdd9f0cbe))
+
 ## [1.0.17](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.16...1.0.17) (2022-07-17)
 
 
