@@ -1,6 +1,6 @@
 plugins {
     id("com.gradle.enterprise") version "3.10.3"
-    id("org.danilopianini.gradle-pre-commit-git-hooks") version "1.0.18"
+    id("org.danilopianini.gradle-pre-commit-git-hooks") version "1.0.19"
 }
 
 gradleEnterprise {
