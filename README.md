@@ -180,3 +180,17 @@ gitHooks {
     createHooks()
 }
 ```
+
+If you want to be able to always overwrite your hook changes pass `true` to the createHooks() method
+```kotlin
+gitHooks {
+    preCommit {
+        from { // Creates a fresh script with a bash shebang line
+            """
+            echo some bash code you have changed
+            """
+        }
+    }
+    createHooks(true)
+}
+```
