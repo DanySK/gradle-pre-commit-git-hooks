@@ -70,6 +70,9 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
                         |
                         |New content:
                         ${script.withMargins()}
+                        |
+                        |If you want to overwrite this file on every change add true to the createHooks(true) 
+                        |method in your settings.gradle.kts
                         """.trimMargin().lines().joinToString(separator = "\n") { "WARNING: $it" }
                     )
                     if (overwriteExisting) {
