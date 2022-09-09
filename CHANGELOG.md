@@ -1,3 +1,34 @@
+## [1.0.20](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.19...1.0.20) (2022-09-09)
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.10 ([5e8647e](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5e8647e36448bd092ede262b29943981449e5e1c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.11 ([73aae37](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/73aae370bf5d644f00621d16352b6b6932e92e91))
+* **deps:** update kotest to v5.4.2 ([fdfc683](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fdfc6838a9e5bb7da1336beab5651a66109effd3))
+* **deps:** update node.js to 16.17 ([c3ded06](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c3ded06676d71111687348adb0029b5638b258e2))
+* **deps:** update plugin com.gradle.enterprise to v3.11 ([2c8d7dd](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2c8d7ddf1bc234e466848f8adf555a7c007b9317))
+* **deps:** update plugin com.gradle.enterprise to v3.11.1 ([3c01556](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/3c015565befbe86cf88ff8dc2021fe15fada2c67))
+* **deps:** update plugin kotlin-qa to v0.23.2 ([869224a](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/869224aa817da4a31a0eefee7febf7230da5dd8c))
+* **deps:** update plugin kotlin-qa to v0.24.0 ([7f43ec3](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7f43ec38a371eaf82a96c6450e2dbbccfda1d0f3))
+* **deps:** update plugin kotlin-qa to v0.25.0 ([2b8289b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2b8289b2cc24505d1247e1ed3e4b15c432388e3c))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.19 ([4e9b171](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/4e9b171c3ae6d0eb878f8e70f23cad44e4ecbd42))
+* **deps:** update plugin publishoncentral to v2.0.6 ([e1e802f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e1e802f2acae5b2ca127b6029057a5cf8dd1a2c0))
+
+
+### Build and continuous integration
+
+* configure mergify ([fca7bec](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fca7becc3ce85c16e238f4f979880cd36ef0c523))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.4 ([c6d9ff3](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c6d9ff37283fa87db700a2b8327fa6c611d067f9))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.5 ([4ce7233](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/4ce723341d2eb581ed6f01d7f3118da115c29930))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.6 ([0c01a6b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/0c01a6b19c90312fb5b49f722f15dfc9ce3ac3f1))
+* do not run the pipeline on Mergify configuration updates ([bd2a2ca](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/bd2a2ca7ad499ea5eed6c1d3ed5735073b7ddcba))
+
+
+### Documentation
+
+* better explain how overwriting hook files work ([#168](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/168)) ([2d802cf](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2d802cf886ae75ec234a9c80a8a6155485fed2bb))
+
 ## [1.0.19](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.18...1.0.19) (2022-08-06)
 
 
