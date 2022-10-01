@@ -1,3 +1,20 @@
+## [1.0.21](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.20...1.0.21) (2022-10-01)
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/action-checkout action to v0.2.2 ([fb8eba5](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fb8eba5b59b598a00120eba49d486b49257d44ca))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.7 ([8c49809](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8c49809a4b89bf09511c078ef185fa8bb9cbe452))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.8 ([13a01e8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/13a01e8fc09072b698af2103d85a5d14d3af7b00))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.9 ([1c21a35](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1c21a352658a15b4ca7aca4f9ea3f13a462b21e8))
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.7.20 ([cdc773c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/cdc773c0b95723a3827c5e0576e6ae7770500e20))
+* **deps:** update plugin multijvmtesting to v0.4.10 ([9b11ac8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/9b11ac8e150e4c800695f67acf4139cc2b9dec6b))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.20 ([c7161c6](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c7161c6d803d791e60d4e1f4fa49084d5562dde1))
+
 ## [1.0.20](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.19...1.0.20) (2022-09-09)
 
 
