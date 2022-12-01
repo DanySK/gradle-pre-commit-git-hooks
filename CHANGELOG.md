@@ -1,3 +1,10 @@
+## [1.0.25](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.24...1.0.25) (2022-12-01)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.7.22 ([8fe7dfc](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8fe7dfcabeb318d4ad38fae31c4060bdbc803e79))
+
 ## [1.0.24](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.23...1.0.24) (2022-11-28)
 
 
