@@ -1,3 +1,27 @@
+## [1.1.0](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.25...1.1.0) (2022-12-09)
+
+
+### Features
+
+* add api for configuring commit-hooks based on file ([46aa368](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/46aa368a2e48b19048a206d7b0f712d143acf9c4))
+
+
+### Dependency updates
+
+* **deps:** update plugin kotlin-qa to v0.29.0 ([36c65eb](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/36c65eb3b5ee439ea8443f4c25639742d70f26d9))
+* **deps:** update plugin kotlin-qa to v0.29.1 ([5103a9a](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5103a9a7b477a2181dc213462f4316c7d8e0b49c))
+* **deps:** update plugin multijvmtesting to v0.4.14 ([e2a7439](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e2a7439fd2ff992cf78828543a6dab8da20050b9))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.24 ([5c6b8e3](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5c6b8e34ee052ac08364f7faad1031b5ddca1ae8))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.0.25 ([26dda78](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/26dda787d83dbd436beb9306541e37ddad233ad5))
+* **deps:** update plugin publishoncentral to v2.0.10 ([0ee3f80](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/0ee3f80d225c1f568e4d0be5b90abb7079ef27e1))
+* **deps:** update plugin publishoncentral to v2.0.11 ([6e0a9ea](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6e0a9ea4db16588a1c9edf29cbb0b7bb955b5e11))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.15 ([c52dce8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c52dce89700fc5afd6d8e9dd34f70571216de0b0))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.16 ([5592764](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5592764fdd3db77dec1362c0f91e13806d3b4bf5))
+
 ## [1.0.25](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.24...1.0.25) (2022-12-01)
 
 
