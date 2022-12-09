@@ -87,7 +87,7 @@ either requiring their success or not, through `tasks`
 gitHooks {
     path = "some/folder" // custom git repository location, defaults to the local project and scans the parents 
     preCommit {
-        // Script downloaded from a source, can be a String or URL
+        // Script from a source, can be a String, URL or File 
         from("https://my.repo/pre-commit.sh")
         // Content can be added at the bottom of the script
         appendScript {

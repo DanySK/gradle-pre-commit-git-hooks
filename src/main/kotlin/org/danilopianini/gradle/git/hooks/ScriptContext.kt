@@ -2,6 +2,7 @@ package org.danilopianini.gradle.git.hooks
 
 import org.gradle.api.Task
 import org.gradle.api.tasks.TaskProvider
+import java.io.File
 import java.net.URL
 
 /**
@@ -23,6 +24,11 @@ interface ScriptContext {
      * Appends the result of the provided function to the existing script.
      */
     fun appendScript(script: () -> String)
+
+    /**
+     * Generates a script from the provided [file].
+     */
+    fun from(file: File) = from("") { file.readText() }
 
     /**
      * Generates a script from the provided [url].
