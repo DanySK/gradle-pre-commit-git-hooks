@@ -39,7 +39,7 @@ jobs:
       group: release
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@v3.2.0
         with:
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - uses: DanySK/build-check-deploy-gradle-action@2.1.17
