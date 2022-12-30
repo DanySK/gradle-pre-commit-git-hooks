@@ -2,7 +2,7 @@
 dokka = "1.7.20"
 konf = "1.1.2"
 kotest = "5.5.4"
-kotlin = "1.7.22"
+kotlin = "1.8.0"
 mockito = "4.5.0"
 
 [libraries]
