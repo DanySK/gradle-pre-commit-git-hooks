@@ -1,3 +1,22 @@
+## [1.1.1](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.0...1.1.1) (2022-12-30)
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.2.0 ([8eeb814](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8eeb814650939b7b5094ca21737782e57ba0e104))
+* **deps:** update danysk/action-checkout action to v0.2.4 ([514bcac](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/514bcac70602b015797cf32cc428a454d946eaa3))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.17 ([627dd53](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/627dd531615f1407e51343b2966af2a1c7b30dea))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.18 ([03264f7](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/03264f77c1f99b065ed088168dc7f1684bb32b4d))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.19 ([177d15b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/177d15be3032b585420882081cb02343868070a9))
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.8.0 ([6362eee](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6362eeef96af96652a1374480f46949cde14b030))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.152 ([ae58f65](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/ae58f65af0bf468124f80732be87f78777b2034b))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.153 ([adabb9c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/adabb9ca3b5d7934a5278760c6c228dda07c64f2))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.0 ([d7ca64d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/d7ca64d98a264428bdb4fa22a1534561d6af66b2))
+
 ## [1.1.0](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.0.25...1.1.0) (2022-12-09)
 
 
