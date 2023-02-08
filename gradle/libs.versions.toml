@@ -1,7 +1,7 @@
 [versions]
 dokka = "1.7.20"
 konf = "1.1.2"
-kotest = "5.5.4"
+kotest = "5.5.5"
 kotlin = "1.8.0"
 mockito = "4.5.0"
 
