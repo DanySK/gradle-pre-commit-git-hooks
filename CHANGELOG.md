@@ -1,3 +1,20 @@
+## [1.1.3](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.2...1.1.3) (2023-02-19)
+
+
+### Build and continuous integration
+
+* apply org.gradle.toolchains.foojay-resolver-convention ([5eb50c0](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5eb50c01f1ad03a2c8aa801821188551f74cfdc0))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.25 ([188a58f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/188a58f3c8121a78c557f1da70b69d72aa24b49e))
+
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8 ([8120904](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8120904315a7968f321150bb2173832cf242e4f1))
+* **deps:** update plugin gitsemver to v1.0.2 ([85ed304](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/85ed30475462ea927132090c21f9de7f5f9f5e1a))
+* **deps:** update plugin multijvmtesting to v0.4.16 ([5eb9bcc](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5eb9bccfe1d4175d4c8f5efdd915f7e34165db74))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.2 ([7d5d732](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7d5d7329e404fc61c2e6d93eebd7d29bae2bb93c))
+* **deps:** update plugin publishoncentral to v3.2.3 ([71c21db](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/71c21dbfa142152dbf4f2afd8d0dc6f9a6cd8600))
+
 ## [1.1.2](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.1...1.1.2) (2023-02-19)
 
 
