@@ -21,7 +21,8 @@ description = "A Gradle plugin enforcing pre-commit and commit-msg Git hooks con
 inner class ProjectInfo {
     val longName = "Gradle pre-commit Git Hooks"
     val website = "https://github.com/DanySK/$name"
-    val scm = "git@github.com:DanySK/$name.git"
+    val vcsUrl = "$website.git"
+    val scm = "scm:git:$website.git"
     val pluginImplementationClass = "$group.gradle.git.hooks.GradleGitHooksPlugin"
     val tags = listOf("git", "hook", "git hooks", "conventional commits")
 }
@@ -126,19 +127,16 @@ publishOnCentral {
     }
 }
 
-pluginBundle {
-    website = info.website
-    vcsUrl = info.website
-    tags = info.tags
-}
-
 gradlePlugin {
+    website.set(info.website)
+    vcsUrl.set(info.vcsUrl)
     plugins {
         create("gitHooks") {
             id = "$group.${project.name}"
             displayName = info.longName
             description = project.description
             implementationClass = info.pluginImplementationClass
+            tags.set(info.tags)
         }
     }
 }
