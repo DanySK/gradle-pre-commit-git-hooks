@@ -20,6 +20,7 @@ jobs:
             uploadPluginMavenToMavenCentralNexus
             uploadGitHooksPluginMarkerMavenToMavenCentralNexus
             close
+            drop
             --parallel
           should-run-codecov: ${{ runner.os == 'Linux' }}
           should-deploy: >-
