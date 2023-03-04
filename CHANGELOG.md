@@ -1,3 +1,25 @@
+## [1.1.4](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.3...1.1.4) (2023-03-04)
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.1.26 ([7a67249](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7a67249b6d4cc6e8f9d8a9a651eb2d5380e01d37))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.0 ([5e60c1b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5e60c1b487d429732c872d2d5346262fa77aa5d3))
+* drop dry-deployed packages to relieve Sonatype OSSRH ([a640931](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/a640931a0e4c62858c41d8882c91b3e01408dbca))
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.dokka to v1.8.10 ([db2acbb](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/db2acbba18286ac809dfbce2d066304a1a08fe68))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.155 ([019ab20](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/019ab20a0f28f11ee001f9dc938635afdd6c5991))
+* **deps:** update plugin com.gradle.enterprise to v3.12.4 ([b31fab4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b31fab48ecb4544fbb4d6636304cb7e3ac88ed06))
+* **deps:** update plugin gitsemver to v1.1.1 ([452e825](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/452e825389796e7a6b59e995dbd3325266f9d8ed))
+* **deps:** update plugin gitsemver to v1.1.2 ([dae8eb8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/dae8eb813eb45358d94ae7fae81717bbad4b8e54))
+* **deps:** update plugin multijvmtesting to v0.4.17 ([7c9ee4a](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7c9ee4a6a89ab2280c55175d09c46ada6a641cef))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.3 ([7257a71](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7257a715db8b2cc192333000c97a4d9b627d55e7))
+* **deps:** update plugin publishoncentral to v3.2.4 ([c03f731](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c03f7316747e56ceb69a51ed2aecf2c9301de679))
+* **deps:** update plugin publishoncentral to v3.3.0 ([d0cebca](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/d0cebcaf33541c2c4186f981f2844d651a8c3f19))
+
 ## [1.1.3](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.2...1.1.3) (2023-02-19)
 
 
