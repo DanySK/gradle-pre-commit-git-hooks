@@ -1,17 +1,4 @@
 pull_request_rules:
-  - name: Auto-rebase if appropriately labeled or if the author is an authorized bot
-    conditions:
-      - or:
-        - label=auto-update-rebase
-        - and:
-            - label=dependencies
-            - or: &authors_are_bots
-                - author=renovate[bot]
-                - author=dependabot[bot]
-      - -draft
-      - -conflict
-    actions:
-      rebase:
   - name: Auto-update with merge if appropriately labeled
     conditions:
       - label=auto-update-merge
