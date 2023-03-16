@@ -11,7 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}-latest
     steps:
       - name: Checkout
-        uses: DanySK/action-checkout@0.2.5
+        uses: DanySK/action-checkout@0.2.6
       - uses: DanySK/build-check-deploy-gradle-action@2.2.0
         with:
           deploy-command: >-
