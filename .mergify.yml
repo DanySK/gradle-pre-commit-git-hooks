@@ -9,7 +9,9 @@ pull_request_rules:
   - name: rebase-merge working updates
     conditions:
       - and:
-        - or: *authors_are_bots
+        - or: &authors_are_bots
+          - author=renovate[bot]
+          - author=dependabot[bot]
         - and:
           - or:
             - check-success=ci-cd / success
