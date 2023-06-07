@@ -1,3 +1,13 @@
+## [1.1.9](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.8...1.1.9) (2023-06-07)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.8.22 ([65482d8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/65482d889d9e517eaf856aed65fcdbf8edf06b27))
+* **deps:** update plugin gitsemver to v1.1.10 ([fdf72fa](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fdf72fa01e02baebc6626ff801d62451c2016c51))
+* **deps:** update plugin multijvmtesting to v0.5.2 ([185eb13](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/185eb13a988e11b2ce4db4cd7ab85594a4c59138))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.8 ([0653be3](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/0653be34ac0c10dc5e43e916261d7075eba779f2))
+
 ## [1.1.8](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.7...1.1.8) (2023-06-05)
 
 
