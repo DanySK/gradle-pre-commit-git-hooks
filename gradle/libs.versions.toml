@@ -21,5 +21,5 @@ gradlePluginPublish = { id = "com.gradle.plugin-publish", version = "1.2.0" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.29.2" }
 multiJvmTesting = { id = "org.danilopianini.multi-jvm-test-plugin", version = "0.5.2" }
-publishOnCentral = { id = "org.danilopianini.publish-on-central", version = "5.0.6" }
+publishOnCentral = { id = "org.danilopianini.publish-on-central", version = "5.0.7" }
 taskTree = { id = "com.dorongold.task-tree", version = "2.1.1" }
