@@ -1,3 +1,10 @@
+## [1.1.13](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.12...1.1.13) (2023-10-19)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.4 ([7137803](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7137803f5d9633d7061e28130c9396f5f7d12ba1))
+
 ## [1.1.12](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.11...1.1.12) (2023-10-19)
 
 
