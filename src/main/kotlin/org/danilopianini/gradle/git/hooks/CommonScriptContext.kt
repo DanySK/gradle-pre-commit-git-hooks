@@ -37,12 +37,12 @@ open class CommonScriptContext(override val name: String) : AbstractScriptContex
             then:
             
             ${
-            runCatching { script() }
-                .getOrElse { "Something whose evaluation this error:\n${it.stackTraceToString()}" }
+                runCatching { script() }
+                    .getOrElse { "Something whose evaluation this error:\n${it.stackTraceToString()}" }
             }
             """.trimIndent()
         }
-        this.script = (shebang?.takeIf { it.isNotBlank() }?.let { "$it\n" } ?: "") + script()
+        this.script = (shebang?.takeIf { it.isNotBlank() }?.let { "$it\n" }.orEmpty()) + script()
     }
 
     final override fun processTasks(vararg tasks: Any, requireSuccess: Boolean) {

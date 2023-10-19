@@ -73,7 +73,7 @@ kotlin {
         compilations.all {
             kotlinOptions {
                 allWarningsAsErrors = true
-                freeCompilerArgs = listOf("-XXLanguage:+InlineClasses", "-opt-in=kotlin.RequiresOptIn")
+                freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn")
             }
         }
     }
@@ -106,7 +106,7 @@ publishOnCentral {
     projectDescription.set(description ?: TODO("Missing description"))
     projectUrl.set(info.website)
     scmConnection.set(info.scm)
-    repository("https://maven.pkg.github.com/DanySK/${rootProject.name}".toLowerCase(), name = "github") {
+    repository("https://maven.pkg.github.com/DanySK/${rootProject.name}".lowercase(), name = "github") {
         user.set("danysk")
         password.set(System.getenv("GITHUB_TOKEN"))
     }

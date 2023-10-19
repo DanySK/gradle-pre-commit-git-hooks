@@ -13,6 +13,7 @@ import org.gradle.internal.impldep.org.junit.rules.TemporaryFolder
 import org.gradle.testkit.runner.BuildResult
 import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
+import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.io.File
 import java.util.concurrent.TimeUnit
@@ -25,20 +26,20 @@ class Tests : StringSpec(
             .acceptPackages(Tests::class.java.`package`.name)
             .scan()
         scan.getResourcesWithLeafName("test.yaml")
-            .flatMap {
-                log.debug("Found test list in $it")
-                val yamlFile = File(it.classpathElementFile.absolutePath + "/" + it.path)
+            .flatMap { resource ->
+                log.debug("Found test list in {}", resource)
+                val yamlFile = File(resource.classpathElementFile.absolutePath + "/" + resource.path)
                 val testConfiguration = Config {
                     addSpec(Root)
-                }.from.yaml.inputStream(it.open())
+                }.from.yaml.inputStream(resource.open())
                 testConfiguration[Root.tests].map { it to yamlFile.parentFile }
             }
             .forEach { (test, location) ->
-                log.debug("Test to be executed: $test from $location")
+                log.debug("Test to be executed: {} from {}", test, location)
                 val testFolder = folder {
                     location.copyRecursively(this.root)
                 }
-                log.debug("Test has been copied into $testFolder and is ready to get executed")
+                log.debug("Test has been copied into {} and is ready to get executed", testFolder)
                 test.description {
                     val result = GradleRunner.create()
                         .withProjectDir(testFolder.root)
@@ -82,15 +83,15 @@ class Tests : StringSpec(
                                 process.exitValue() shouldBe 0
                             }
                         } ?: log.warn(
-                            "No known Unix shell available on this system! Tests with scripts won't be executed"
+                            "No known Unix shell available on this system! Tests with scripts won't be executed",
                         )
                     }
                 }
             }
-    }
+    },
 ) {
     companion object {
-        val log = LoggerFactory.getLogger(Tests::class.java)
+        val log: Logger = LoggerFactory.getLogger(Tests::class.java)
         private val shells = listOf("sh", "bash", "zsh", "fish", "csh", "ksh")
 
         private fun BuildResult.outcomeOf(name: String) = requireNotNull(task(":$name")) {
