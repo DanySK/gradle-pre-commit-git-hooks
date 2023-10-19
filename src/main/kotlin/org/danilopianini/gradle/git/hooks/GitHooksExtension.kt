@@ -73,7 +73,9 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
                         |
                         |If you want to overwrite this file on every change add true to the createHooks(true) 
                         |method in your settings.gradle.kts
-                        """.trimMargin().lines().joinToString(separator = "\n") { "WARNING: $it" }
+                        """.trimMargin().lines().joinToString(separator = "\n") {
+                            "WARNING: $it"
+                        },
                     )
                     if (overwriteExisting) {
                         println("WARNING: Overwriting git hook $name")
