@@ -1,3 +1,25 @@
+## [1.1.12](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.11...1.1.12) (2023-10-19)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.9.10 ([b90cff2](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b90cff28e2862ed53518c955fa26feacdc71a7ae))
+* **deps:** update plugin gitsemver to v1.1.11 ([9efbb5a](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/9efbb5a564f4edfdd9312c6c28c796b0ed39cf65))
+* **deps:** update plugin gitsemver to v1.1.12 ([f459381](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f459381450d82aebcc90a957d57136426d8fa0af))
+* **deps:** update plugin gitsemver to v1.1.14 ([18accab](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/18accab7af9cdeb3da46c2d241e224414d2799f7))
+* **deps:** update plugin gitsemver to v1.1.15 ([1ca8468](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1ca8468aa85e2c620a46b5f8772bfbc2451b979e))
+* **deps:** update plugin multijvmtesting to v0.5.6 ([542c84d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/542c84da701de2c8d52036e8d818c7b41f6e908f))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.11 ([aff065b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/aff065b2833f51def2132f90bc3b831f847e2a67))
+* **deps:** update plugin publishoncentral to v5.0.16 ([956e8f7](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/956e8f7b76660e56e2cd1feea7f49793d64b43ce))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.1 ([cf544b1](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/cf544b1d9e21c35266a083dc512fb9841e802490))
+* **deps:** update danysk/action-checkout action to v0.2.14 ([60c7aa1](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/60c7aa126eb63aa67d372cb826820658cd2ada93))
+* exclude detekt from the kotlin version enforcement ([83478e0](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/83478e099fe7ac10fc36f9dd782074d25624eb5b))
+* **mergify:** point to the shared configuration ([361d729](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/361d729e721e68d889a754cb38dab63d76e6b435))
+
 ## [1.1.11](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.10...1.1.11) (2023-10-16)
 
 
