@@ -1,3 +1,24 @@
+## [1.1.14](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.13...1.1.14) (2023-10-31)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.9.20 ([683f0ba](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/683f0ba299ddb6c6f683d4d9ba0ee6d05906c591))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.69 ([601cfdd](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/601cfdd7dbc4bac3dce7a302dda43a2ab4555cd2))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.70 ([01abb06](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/01abb0662fbf99e7c797711275c6fc02a4e9962f))
+* **deps:** update node.js to 20.9 ([18b215b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/18b215b83a6f3e711de195dffa8d5dfac5bbd33f))
+* **deps:** update node.js to v20 ([e293596](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e293596264b8c066746e71fb5fa5150cfc250946))
+* **deps:** update plugin gitsemver to v2 ([fb2cb0e](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fb2cb0efca236ac7684a403f909ea836a0ab6c3e))
+* **deps:** update plugin gitsemver to v2.0.1 ([e5032f5](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e5032f59e379a5555cd7b13a29500c7b4652b029))
+* **deps:** update plugin kotlin-qa to v0.52.0 and fix all related style issues ([#245](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/245)) ([7981d60](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/7981d60973682460232de9b128fc444ddd116005))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.12 ([2f61e28](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2f61e282b10ce99e6635395cf6943e883236f884))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.13 ([99189c9](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/99189c93bc1e5e1cc7ad853dd2c955e3c43d046f))
+
+
+### Build and continuous integration
+
+* disable the fail-fast mode on OS matrix ([94ef8d4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/94ef8d44ad844cffeb53570b920e8f9af65cb6b6))
+
 ## [1.1.13](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.12...1.1.13) (2023-10-19)
 
 
