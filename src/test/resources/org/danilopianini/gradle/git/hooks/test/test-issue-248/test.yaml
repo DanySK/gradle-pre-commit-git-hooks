@@ -1,0 +1,14 @@
+tests:
+  - description: "Empty msg hooks should be working"
+    configuration:
+      tasks: tasks
+    expectation:
+      success:
+        - tasks
+      file_exists:
+        - name: .git/hooks/commit-msg
+          content: |
+            #!/bin/sh
+            true
+
+          permissions: X

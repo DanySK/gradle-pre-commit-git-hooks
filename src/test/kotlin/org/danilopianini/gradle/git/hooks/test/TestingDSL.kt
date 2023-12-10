@@ -46,19 +46,19 @@ data class ExistingFile(
         }
         if (content != null) {
             val text = readText()
-            require(text == content) {
+            require(text.trim() == content.trim()) {
                 """
-                Content of $name does not match expectations.
-                
-                Expected:
-                $content
-                
-                Actual:
-                $text
-                
-                Difference starts at index ${StringUtils.indexOfDifference(content, text)}:
-                ${StringUtils.difference(content, text)}
-                """.trimIndent()
+                |Content of $name does not match expectations.
+                |
+                |Expected:
+                |${content.replace(Regex("\\R"), "\n|")}
+                |
+                |Actual:
+                |${text.replace(Regex("\\R"), "\n|")}
+                |
+                |Difference starts at index ${StringUtils.indexOfDifference(content, text)}:
+                |${StringUtils.difference(content, text).replace(Regex("\\R"), "\n|")}
+                """.trimMargin()
             }
         }
         if (findRegex != null) {
