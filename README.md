@@ -85,7 +85,7 @@ either requiring their success or not, through `tasks`
 
 ```kotlin
 gitHooks {
-    path = "some/folder" // custom git repository location, defaults to the local project and scans the parents 
+    repoRoot = file("some/folder") // custom git repository location, defaults to the local project and scans the parents 
     preCommit {
         // Script from a source, can be a String, URL or File 
         from("https://my.repo/pre-commit.sh")

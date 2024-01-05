@@ -1,0 +1,11 @@
+tests:
+  - description: "Hooks should be created"
+    configuration:
+      tasks: tasks
+      options: --stacktrace
+    expectation:
+      success:
+        - tasks
+      file_exists:
+        - name: .git
+          findRegex: "gitdir: .*"
