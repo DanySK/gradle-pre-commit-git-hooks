@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.18...2.0.0) (2024-01-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* disable the hooks generation in detached worktrees. Fixes #396. Thanks @groding for reporting.
+
+### Features
+
+* disable the hooks generation in detached worktrees. Fixes [#396](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/396). Thanks [@groding](https://github.com/groding) for reporting. ([2175f58](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2175f58ca2378f8d447050825840b4ff7050c5a6))
+
 ## [1.1.18](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.17...1.1.18) (2024-01-05)
 
 
