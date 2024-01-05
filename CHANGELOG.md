@@ -1,3 +1,18 @@
+## [1.1.18](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.17...1.1.18) (2024-01-05)
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.85 ([e0d8dcd](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e0d8dcd50e693db301f6a0c0ee136cb7b7ebc7cf))
+* **deps:** update plugin kotlin-qa to v0.57.1 ([38ede3f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/38ede3f54a8df1fc8db82af3a6ff083f5a828894))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.17 ([cfa57d8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/cfa57d84f94c674a7ef976fe7cd1eb11476e2697))
+* **deps:** update plugin publishoncentral to v5.0.22 ([3828a6f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/3828a6f2b9480417368fa53a3c52e6a93c372857))
+
+
+### Bug Fixes
+
+* automatically create the `.git/hooks` folder if not existing. Improves compatibility with SourceTree. Thanks @Ranbato for reporting. ([b756f27](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b756f277dd8d0ef7e2cf90645cc1dd97c0c0f26a))
+
 ## [1.1.17](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/1.1.16...1.1.17) (2023-12-21)
 
 
