@@ -3,7 +3,7 @@ plugins {
 }
 
 gitHooks {
-    file(".git/hooks").mkdirs()
+    file(".git").mkdirs()
     preCommit { tasks("ktlintCheck") }
     commitMsg { conventionalCommits() }
     createHooks()

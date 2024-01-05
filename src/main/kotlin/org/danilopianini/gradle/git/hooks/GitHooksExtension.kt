@@ -10,16 +10,32 @@ import java.io.Serializable
 open class GitHooksExtension(val settings: Settings) : Serializable {
 
     private var hooks: Map<String, String> = emptyMap()
+    private var pathHasBeenManuallySet = false
 
     /**
      * The git repository root. If unset, it will be searched recursively from the project root towards the
      * filesystem root.
      */
-    var path: File? = null
-        get() =
-            field ?: requireNotNull(generateSequence(settings.settingsDir) { it.parentFile }.find { it.isGitRoot() }) {
-                "No git root could be found in ${settings.settingsDir.absolutePath} or any of its parent directories"
+    var path: File = settings.settingsDir
+        set(value) {
+            require(value.isGitRoot()) {
+                "${value.absolutePath} is not a valid git root (it must contain a .git folder)"
             }
+            pathHasBeenManuallySet = true
+            field = value
+        }
+        get() =
+            field.takeIf { pathHasBeenManuallySet }
+                ?: generateSequence(field) { it.parentFile }.find { it.isGitRoot() }
+                ?: error {
+                    """
+                    No git root could be found in ${field.absolutePath} or any of its parent directories.
+                    You may want to set it manually with:
+                    gitHooks {
+                        path = File("<path>")
+                    }
+                    """.trimIndent()
+                }
 
     private inline fun <H : ScriptContext> hook(context: H, configuration: H.() -> Unit) {
         require(!hooks.containsKey(context.name)) {
@@ -50,11 +66,20 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
      * If passed `true`, overwrites in case the script is already present and different than expected.
      */
     fun createHooks(overwriteExisting: Boolean = false) {
-        val root = requireNotNull(path?.takeIf { it.isGitRoot() }) {
-            "${path?.absolutePath} is not a valid git root"
+        val hooksFolder = File(path, ".git/hooks")
+        when {
+            !hooksFolder.exists() -> hooksFolder.mkdirs()
+            hooksFolder.exists() && !hooksFolder.isDirectory ->
+                error("${hooksFolder.absolutePath} exists but it is not a directory")
+        }
+        check(hooksFolder.exists()) {
+            "${hooksFolder.absolutePath} should have been initialized, but it does not exist"
+        }
+        check(hooksFolder.isDirectory) {
+            "${hooksFolder.absolutePath} has been initialized, but it is a file, not a directory"
         }
         hooks.forEach { (name, script) ->
-            val hook = File(root.absolutePath, "/.git/hooks/$name")
+            val hook = File(hooksFolder, name)
             if (!hook.exists()) {
                 require(hook.createNewFile()) { "Cannot create file ${hook.absolutePath}" }
                 hook.writeScript(script)
@@ -102,11 +127,7 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
         }
 
         private fun File.isGitRoot(): Boolean = listFiles()
-            ?.any { folder ->
-                folder.isDirectory &&
-                    folder.name == ".git" &&
-                    folder.listFiles()?.any { it.isDirectory && it.name == "hooks" } ?: false
-            }
+            ?.any { folder -> folder.isDirectory && folder.name == ".git" }
             ?: false
     }
 }

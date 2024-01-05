@@ -5,7 +5,7 @@ plugins {
 }
 
 gitHooks {
-    file(".git/hooks").mkdirs()
+    file(".git").mkdirs()
     commitMsg {
         conventionalCommits()
     }
