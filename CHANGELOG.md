@@ -1,3 +1,15 @@
+## [2.0.3](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.2...2.0.3) (2024-03-07)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.9.23 ([710f74c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/710f74caa2ed0ccbf2bde8fa936a727ba7acef3f))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.167 ([6ff07af](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6ff07af289e44c01f9c678871128ec9cd7d2a7f6))
+* **deps:** update plugin gitsemver to v3.1.2 ([74c4467](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/74c4467d51c201ffdc232d249e34ac4f9839f1fb))
+* **deps:** update plugin kotlin-qa to v0.60.2 ([8d85037](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8d85037dd8cb18632d44775761ac436d3a0690cc))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.2 ([f1b7335](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f1b7335d8e89927bbd8fae5f497e0b2aa37dc755))
+* **deps:** update plugin publishoncentral to v5.0.24 ([3735965](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/37359654bcc6dede65a90e0a72868726782c11b1))
+
 ## [2.0.2](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.1...2.0.2) (2024-03-04)
 
 
