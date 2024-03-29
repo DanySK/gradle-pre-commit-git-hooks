@@ -22,4 +22,4 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.61.0" }
 multiJvmTesting = { id = "org.danilopianini.multi-jvm-test-plugin", version = "0.5.8" }
 publishOnCentral = { id = "org.danilopianini.publish-on-central", version = "5.0.26" }
-taskTree = { id = "com.dorongold.task-tree", version = "2.1.1" }
+taskTree = { id = "com.dorongold.task-tree", version = "3.0.0" }
