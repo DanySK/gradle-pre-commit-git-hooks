@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout
         uses: DanySK/action-checkout@0.2.16
-      - uses: DanySK/build-check-deploy-gradle-action@2.4.16
+      - uses: DanySK/build-check-deploy-gradle-action@2.4.17
         with:
           deploy-command: >-
             ./gradlew
@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v4.1.4
         with:
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
-      - uses: DanySK/build-check-deploy-gradle-action@2.4.16
+      - uses: DanySK/build-check-deploy-gradle-action@2.4.17
         with:
           build-command: true
           check-command: true
