@@ -1,3 +1,41 @@
+## [2.0.5](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.4...2.0.5) (2024-05-07)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.9.24 ([6e2b444](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6e2b44458de7651f72533806b3a9ce4a688d5e09))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.170 ([a80b088](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/a80b088b63ac5b5a75c28c3ab8e1fd375cdab152))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.171 ([bf554ee](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/bf554eeea37b63378b5909ff3614244dbd0b352f))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.172 ([5691cc3](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5691cc3d341b957de5fd678df33b357f22c6c11e))
+* **deps:** update node.js to 20.12 ([26e728c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/26e728c8be7744d80f8bad35fa28fb490669c40d))
+* **deps:** update plugin com.gradle.enterprise to v3.17 ([ce186a4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/ce186a465fa0ac353f61e0d6479431f299af55ff))
+* **deps:** update plugin com.gradle.enterprise to v3.17.1 ([9151809](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/915180950056c9502c7f88be5d0f5c2857e84b09))
+* **deps:** update plugin com.gradle.enterprise to v3.17.2 ([95835ef](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/95835ef5794dc57fa24efd875acd7340f04b0b76))
+* **deps:** update plugin gitsemver to v3.1.4 ([0b26b56](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/0b26b5681c355fc8dc980d5b0b7db13f10e01150))
+* **deps:** update plugin kotlin-qa to v0.60.4 ([1d6e82f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1d6e82f39bc0fc733f36cb804842fcba61ea3269))
+* **deps:** update plugin kotlin-qa to v0.61.0 ([78aa213](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/78aa21328b409fd89cdcf92fb69a28e3b2ba6eba))
+* **deps:** update plugin kotlin-qa to v0.61.1 ([632a522](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/632a52207daf2cdbdc950fdb45c6e5a390fc9bc2))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.4 ([c8067dd](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c8067dd5b6ac01d8c25e6b022a8d537f1730c8fe))
+* **deps:** update plugin publishoncentral to v5.1.0 ([da7ed82](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/da7ed82e99958fa9793ec531833dd052ee7066f7))
+* **deps:** update plugin tasktree to v3 ([302df62](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/302df62b238a9052be99832ba41edd62d2adaa05))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.3 ([5b194b3](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5b194b3c344cc2f20e450574961696ccd61a277f))
+* **deps:** update actions/checkout action to v4.1.4 ([0541a9c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/0541a9c5637a76dd7f46cb7c02a14a37a166fb9c))
+* **deps:** update actions/checkout action to v4.1.5 ([e60a506](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e60a50651b225f3fd169165fa5526d696af03299))
+* **deps:** update danysk/action-checkout action to v0.2.15 ([516b316](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/516b31623aba636690a8d828865ba8b7d79cae13))
+* **deps:** update danysk/action-checkout action to v0.2.16 ([d33774d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/d33774d8e4161e7da112ec506e92047402955cac))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.4.11 ([52941c9](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/52941c9f540c5089a7135ee0a1f499f2d34e14f1))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.4.12 ([5bdd9f5](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/5bdd9f577a4aa81376833a44843834c93b4ee88a))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.4.13 ([3228306](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/32283069d7c801553a9464bddc1d435c9bac7322))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.4.14 ([dd27b98](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/dd27b98779a9a2d57c3f07c9dd0aca8b7660dc67))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.4.15 ([24a436d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/24a436df2dd15cb40fc134511537eb8ffd3d9bc7))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.4.16 ([168ea00](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/168ea00c236979a35643dc873ebe3eb8dd7cbe8a))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.4.17 ([de0882f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/de0882f08b8cc8c3dbcbb44948ccf5483504a0a5))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.4.18 ([6ccffff](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6ccffff9ae6686fa9c19f24823ea7e384fb4c680))
+
 ## [2.0.4](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.3...2.0.4) (2024-03-22)
 
 
