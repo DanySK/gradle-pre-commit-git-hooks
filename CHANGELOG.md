@@ -1,3 +1,14 @@
+## [2.0.7](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.6...2.0.7) (2024-06-01)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.8 ([3ebeabd](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/3ebeabd3ea087739aee1339c58b83516a92f9cc2))
+* **deps:** update node.js to 20.14 ([f542708](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f5427088aab77822a95385f3033c5c2909dc2db3))
+* **deps:** update plugin gitsemver to v3.1.7 ([92280cb](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/92280cbb22ef61293ca4ea186287ea08271075bb))
+* **deps:** update plugin kotlin-qa to v0.62.1 ([3a24a92](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/3a24a92330425cd87f20d3108a1ae4a5fb257235))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.6 ([a4da2a3](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/a4da2a3230a9fd32855c483d74b5859b9ab3784a))
+
 ## [2.0.6](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.5...2.0.6) (2024-05-21)
 
 
