@@ -29,6 +29,7 @@ jobs:
             runner.os == 'Linux'
             && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
             }}
+          maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
           signing-key: ${{ secrets.SIGNING_KEY }}
           signing-password: ${{ secrets.SIGNING_PASSWORD }}
@@ -57,6 +58,7 @@ jobs:
           github-token: ${{ github.token }}
           gradle-publish-secret: ${{ secrets.GRADLE_PUBLISH_SECRET }}
           gradle-publish-key: ${{ secrets.GRADLE_PUBLISH_KEY }}
+          maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
           signing-key: ${{ secrets.SIGNING_KEY }}
           signing-password: ${{ secrets.SIGNING_PASSWORD }}
