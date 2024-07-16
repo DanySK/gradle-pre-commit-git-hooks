@@ -1,4 +1,4 @@
-var publishCmd = `
+const publishCmd = `
 git tag -a -f \${nextRelease.version} \${nextRelease.version} -F CHANGELOG.md
 git push --force origin \${nextRelease.version}
 ./gradlew \
@@ -12,7 +12,7 @@ git push --force origin \${nextRelease.version}
     -Pgradle.publish.secret=$GRADLE_PUBLISH_SECRET || exit 2
 ./gradlew publishKotlinMavenPublicationToGithubRepository || true
 `
-var config = require('semantic-release-preconfigured-conventional-commits');
+import config from 'semantic-release-preconfigured-conventional-commits' assert { type: "json" };
 config.plugins.push(
     [
         "@semantic-release/exec",
@@ -23,4 +23,4 @@ config.plugins.push(
     "@semantic-release/github",
     "@semantic-release/git",
 )
-module.exports = config
+export default config
