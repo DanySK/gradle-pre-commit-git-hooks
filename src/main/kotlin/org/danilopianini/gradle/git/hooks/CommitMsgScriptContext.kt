@@ -28,7 +28,7 @@ class CommitMsgScriptContext : CommonScriptContext("commit-msg") {
         }
     }
 
-    companion object {
+    private companion object {
         private const val SCRIPT_PATH = "org/danilopianini/gradle/git/hooks/conventional-commit-message.sh"
     }
 }
