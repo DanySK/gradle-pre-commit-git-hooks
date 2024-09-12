@@ -140,13 +140,13 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
         }
     }
 
-    companion object {
+    internal companion object {
         private const val serialVersionUID = 2L
 
         /**
          * Extension name.
          */
-        const val name: String = "gitHooks"
+        internal const val name: String = "gitHooks"
 
         private fun String.withMargins() = lines().joinToString(separator = "\n|", prefix = "|")
 
