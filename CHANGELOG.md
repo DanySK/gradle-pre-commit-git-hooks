@@ -1,3 +1,9 @@
+## [2.0.12](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.11...2.0.12) (2024-09-12)
+
+### Bug Fixes
+
+* make `GitHooksExtension.Companion` internal ([4543825](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/4543825ce3003224c68a7045f07177ca5ced3cda))
+
 ## [2.0.11](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.10...2.0.11) (2024-09-12)
 
 ### Dependency updates
