@@ -25,6 +25,9 @@ interface ConventionalCommitsContext {
      */
     fun defaultTypes() = types(defaultTypes)
 
+    /**
+     * Container for the default types.
+     */
     companion object {
 
         /**
