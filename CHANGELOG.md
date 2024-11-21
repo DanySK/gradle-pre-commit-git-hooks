@@ -1,3 +1,18 @@
+## [2.0.15](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.14...2.0.15) (2024-11-21)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.11.1 ([#756](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/756)) ([fd465f0](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fd465f046f38a6102ddd39595ae3603c1f0f0fac))
+* **deps:** update plugin multijvmtesting to v1.3.1 ([#751](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/751)) ([edf27ae](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/edf27aedde95345d1c805cf46213dea125ba07b5))
+* **deps:** update plugin multijvmtesting to v1.3.2 ([#757](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/757)) ([616242b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/616242b9907c35a0deb168a9b2b74aea0351090a))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.14 ([#753](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/753)) ([6b6c509](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/6b6c509734f256d7b6ce4738d728ad0a4043aa3d))
+* **deps:** update plugin publishoncentral to v5.1.10 ([#752](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/752)) ([8d4bc57](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8d4bc57f0eef2173a2e3135553490cb053fcb530))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.18 ([#754](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/754)) ([587d379](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/587d37946a09299a2476e55d23e0541858513aed))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.22 ([#755](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/755)) ([f3947e7](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f3947e7886239ab4f4e3add73c29b17af9f7bc7a))
+
 ## [2.0.14](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.13...2.0.14) (2024-11-18)
 
 ### Dependency updates
