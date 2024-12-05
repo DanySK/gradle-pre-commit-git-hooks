@@ -4,7 +4,6 @@ package org.danilopianini.gradle.git.hooks
  * Specialized DSL element for dealing with [conventional commits](https://www.conventionalcommits.org/).
  */
 interface ConventionalCommitsContext {
-
     /**
      * The selected valid commit types.
      */
@@ -29,7 +28,6 @@ interface ConventionalCommitsContext {
      * Container for the default types.
      */
     companion object {
-
         /**
          * Base types: `fix` and `feat`.
          */
@@ -39,16 +37,18 @@ interface ConventionalCommitsContext {
          * Additional types, as listed in the [conventional commits](https://www.conventionalcommits.org/) webpage,
          * plus `refactor`, which is commonly used.
          */
-        val defaultTypes: Set<String> = baseTypes + setOf(
-            "build",
-            "chore",
-            "ci",
-            "docs",
-            "perf",
-            "refactor",
-            "revert",
-            "style",
-            "test",
-        )
+        val defaultTypes: Set<String> =
+            baseTypes +
+                setOf(
+                    "build",
+                    "chore",
+                    "ci",
+                    "docs",
+                    "perf",
+                    "refactor",
+                    "revert",
+                    "style",
+                    "test",
+                )
     }
 }

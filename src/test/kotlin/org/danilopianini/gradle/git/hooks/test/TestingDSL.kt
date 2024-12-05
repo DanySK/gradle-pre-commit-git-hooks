@@ -26,11 +26,15 @@ data class Expectation(
 )
 
 enum class Permission(private val hasPermission: File.() -> Boolean) {
-    R(File::canRead), W(File::canWrite), X(File::canExecute);
+    R(File::canRead),
+    W(File::canWrite),
+    X(File::canExecute),
+    ;
 
-    fun requireOnFile(file: File) = require(file.hasPermission()) {
-        "File ${file.absolutePath} must have permission $name, but it does not."
-    }
+    fun requireOnFile(file: File) =
+        require(file.hasPermission()) {
+            "File ${file.absolutePath} must have permission $name, but it does not."
+        }
 }
 
 data class ExistingFile(
@@ -40,14 +44,15 @@ data class ExistingFile(
     val trim: Boolean = false,
     val permissions: List<Permission> = emptyList(),
 ) {
-    fun validate(actualFile: File): Unit = with(actualFile) {
-        require(exists()) {
-            "File $name does not exist."
-        }
-        if (content != null) {
-            val text = readText()
-            require(text.trim() == content.trim()) {
-                """
+    fun validate(actualFile: File): Unit =
+        with(actualFile) {
+            require(exists()) {
+                "File $name does not exist."
+            }
+            if (content != null) {
+                val text = readText()
+                require(text.trim() == content.trim()) {
+                    """
                 |Content of $name does not match expectations.
                 |
                 |Expected:
@@ -58,18 +63,18 @@ data class ExistingFile(
                 |
                 |Difference starts at index ${StringUtils.indexOfDifference(content, text)}:
                 |${StringUtils.difference(content, text).replace(Regex("\\R"), "\n|")}
-                """.trimMargin()
+                    """.trimMargin()
+                }
             }
-        }
-        if (findRegex != null) {
-            val regex = Regex(findRegex)
-            requireNotNull(readLines().find { regex.matches(it) }) {
-                """
-                None of the lines in $name matches the regular expression $findRegex. File content:
-                ${readText()}
-                """.trimIndent()
+            if (findRegex != null) {
+                val regex = Regex(findRegex)
+                requireNotNull(readLines().find { regex.matches(it) }) {
+                    """
+                    None of the lines in $name matches the regular expression $findRegex. File content:
+                    ${readText()}
+                    """.trimIndent()
+                }
             }
+            permissions.forEach { it.requireOnFile(this) }
         }
-        permissions.forEach { it.requireOnFile(this) }
-    }
 }

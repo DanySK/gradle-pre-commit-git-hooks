@@ -9,7 +9,6 @@ import java.io.Serializable
  * DSL entry point, to be applied to [settings].gradle.kts.
  */
 open class GitHooksExtension(val settings: Settings) : Serializable {
-
     private var hooks: Map<String, String> = emptyMap()
     private var pathHasBeenManuallySet = false
 
@@ -40,7 +39,10 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
 
     private val gitDir get() = File(repoRoot, ".git")
 
-    private inline fun <H : ScriptContext> hook(context: H, configuration: H.() -> Unit) {
+    private inline fun <H : ScriptContext> hook(
+        context: H,
+        configuration: H.() -> Unit,
+    ) {
         require(!hooks.containsKey(context.name)) {
             "it looks like the hook ${context.name} is being defined twice"
         }
@@ -50,8 +52,10 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
     /**
      * Defines a new hook with an arbitrary name.
      */
-    fun hook(hookName: String, configuration: ScriptContext.() -> Unit) =
-        hook(CommonScriptContext(hookName), configuration)
+    fun hook(
+        hookName: String,
+        configuration: ScriptContext.() -> Unit,
+    ) = hook(CommonScriptContext(hookName), configuration)
 
     /**
      * Pre-commit hook.
@@ -146,7 +150,7 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
         /**
          * Extension name.
          */
-        internal const val name: String = "gitHooks"
+        internal const val NAME: String = "gitHooks"
 
         private fun String.withMargins() = lines().joinToString(separator = "\n|", prefix = "|")
 
@@ -155,8 +159,9 @@ open class GitHooksExtension(val settings: Settings) : Serializable {
             setExecutable(true)
         }
 
-        private fun File.isGitRoot(): Boolean = listFiles()
-            ?.any { file -> file.name == ".git" }
-            ?: false
+        private fun File.isGitRoot(): Boolean =
+            listFiles()
+                ?.any { file -> file.name == ".git" }
+                ?: false
     }
 }

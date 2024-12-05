@@ -13,21 +13,24 @@ open class CommonScriptContext(override val name: String) : AbstractScriptContex
     override fun appendScript(script: () -> String) {
         require(this.script.isNotEmpty()) {
             """
-                An append was requested to an uninitialized script $name. Configure as follows, instead:
-                gitHooks {
-                    <your script block> {
-                        from {
-                            <heading, if any>
-                        }
-                        <remainder of your configuration>
+            An append was requested to an uninitialized script $name. Configure as follows, instead:
+            gitHooks {
+                <your script block> {
+                    from {
+                        <heading, if any>
                     }
+                    <remainder of your configuration>
                 }
+            }
             """.trimIndent()
         }
         this.script += script() + '\n'
     }
 
-    final override fun from(shebang: String?, script: () -> String) {
+    final override fun from(
+        shebang: String?,
+        script: () -> String,
+    ) {
         require(this.script.isEmpty()) {
             """
             The $name git hook is being defined twice, and this is likely an error. Formerly:
@@ -45,15 +48,22 @@ open class CommonScriptContext(override val name: String) : AbstractScriptContex
         this.script = (shebang?.takeIf { it.isNotBlank() }?.let { "$it\n" }.orEmpty()) + script()
     }
 
-    final override fun processTasks(vararg tasks: Any, requireSuccess: Boolean) {
-        val names = tasks.map { task ->
-            when (task) {
-                is String -> task
-                is Task -> task.name
-                is TaskProvider<*> -> task.name
-                else -> error("Object '$task' with type '${task::class.simpleName}' cannot produce valid task names")
+    final override fun processTasks(
+        vararg tasks: Any,
+        requireSuccess: Boolean,
+    ) {
+        val names =
+            tasks.map { task ->
+                when (task) {
+                    is String -> task
+                    is Task -> task.name
+                    is TaskProvider<*> -> task.name
+                    else ->
+                        error(
+                            "Object '$task' with type '${task::class.simpleName}' cannot produce valid task names",
+                        )
+                }
             }
-        }
         if (script.isEmpty()) {
             from { "" }
         }
