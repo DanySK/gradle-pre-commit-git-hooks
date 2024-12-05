@@ -14,7 +14,13 @@ data class Test(
     val expectation: Expectation,
 )
 
-data class Configuration(val tasks: List<String>, val options: List<String> = emptyList())
+@Suppress("ConstructorParameterNaming")
+data class Configuration(
+    val tasks: List<String>,
+    val options: List<String> = emptyList(),
+    val pre_run_script: List<String> = emptyList(),
+    val post_run_script: List<String> = emptyList(),
+)
 
 @Suppress("ConstructorParameterNaming")
 data class Expectation(
@@ -22,7 +28,6 @@ data class Expectation(
     val success: List<String> = emptyList(),
     val failure: List<String> = emptyList(),
     val output_contains: List<String> = emptyList(),
-    val post_run_script: List<String> = emptyList(),
 )
 
 enum class Permission(private val hasPermission: File.() -> Boolean) {

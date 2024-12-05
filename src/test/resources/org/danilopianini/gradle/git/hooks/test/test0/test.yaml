@@ -2,6 +2,7 @@ tests:
   - description: "Hooks should be created"
     configuration:
       tasks: tasks
+      pre_run_script: git config --global commit.gpgsign false
     expectation:
       file_exists:
         - name: .git/hooks/commit-msg

@@ -3,6 +3,7 @@ tests:
     configuration:
       tasks: tasks
       options: --stacktrace
+      pre_run_script: git config --global commit.gpgsign false
     expectation:
       success:
         - tasks

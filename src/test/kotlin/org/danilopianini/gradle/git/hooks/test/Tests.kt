@@ -44,6 +44,7 @@ class Tests : StringSpec(
                     }
                 log.debug("Test has been copied into {} and is ready to get executed", testFolder)
                 test.description {
+                    test.configuration.pre_run_script.runCommandsIn(testFolder)
                     val result =
                         GradleRunner.create()
                             .withProjectDir(testFolder.root)
@@ -69,29 +70,7 @@ class Tests : StringSpec(
                             }
                         it.validate(file)
                     }
-                    test.expectation.post_run_script.takeIf { it.isNotEmpty() }?.also { postRuns ->
-                        findShell()?.also { shell ->
-                            postRuns.forEach { postRun ->
-                                val hash = Hashing.sha512().hashString(postRun)
-                                val fileName = "post-run-$hash.sh"
-                                with(File(testFolder.root, fileName)) {
-                                    writeText(postRun)
-                                    setExecutable(true)
-                                }
-                                val process =
-                                    ProcessBuilder()
-                                        .directory(testFolder.root)
-                                        .command(shell, fileName)
-                                        .start()
-                                val finished = process.waitFor(10, TimeUnit.SECONDS)
-                                finished shouldBe true
-                                log.debug(process.inputStream.bufferedReader().use { it.readText() })
-                                process.exitValue() shouldBe 0
-                            }
-                        } ?: log.warn(
-                            "No known Unix shell available on this system! Tests with scripts won't be executed",
-                        )
-                    }
+                    test.configuration.post_run_script.runCommandsIn(testFolder)
                 }
             }
     },
@@ -119,6 +98,30 @@ class Tests : StringSpec(
                     executable.exists() && executable.canExecute()
                 }
             }
+        }
+
+        private fun List<String>.runCommandsIn(testFolder: TemporaryFolder) {
+            findShell()?.also { shell ->
+                forEach { postRun ->
+                    val hash = Hashing.sha512().hashString(postRun)
+                    val fileName = "script-$hash.sh"
+                    with(File(testFolder.root, fileName)) {
+                        writeText(postRun)
+                        setExecutable(true)
+                    }
+                    val process =
+                        ProcessBuilder()
+                            .directory(testFolder.root)
+                            .command(shell, fileName)
+                            .start()
+                    val finished = process.waitFor(10, TimeUnit.SECONDS)
+                    finished shouldBe true
+                    log.debug(process.inputStream.bufferedReader().use { it.readText() })
+                    process.exitValue() shouldBe 0
+                }
+            } ?: log.warn(
+                "No known Unix shell available on this system! Tests with scripts won't be executed",
+            )
         }
     }
 }
