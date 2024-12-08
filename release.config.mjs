@@ -5,7 +5,7 @@ git push --force origin \${nextRelease.version}
     uploadKotlin \
     uploadPluginMavenToMavenCentralNexus \
     uploadGitHooksPluginMarkerMavenToMavenCentralNexus \
-    release || exit 1
+    releaseStagingRepositoryOnMavenCentral || exit 1
 ./gradlew \
     publishPlugins \
     -Pgradle.publish.key=$GRADLE_PUBLISH_KEY \
