@@ -30,7 +30,9 @@ data class Expectation(
     val output_contains: List<String> = emptyList(),
 )
 
-enum class Permission(private val hasPermission: File.() -> Boolean) {
+enum class Permission(
+    private val hasPermission: File.() -> Boolean,
+) {
     R(File::canRead),
     W(File::canWrite),
     X(File::canExecute),

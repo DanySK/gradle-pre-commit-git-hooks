@@ -8,7 +8,9 @@ import java.io.Serializable
 /**
  * DSL entry point, to be applied to [settings].gradle.kts.
  */
-open class GitHooksExtension(val settings: Settings) : Serializable {
+open class GitHooksExtension(
+    val settings: Settings,
+) : Serializable {
     private var hooks: Map<String, String> = emptyMap()
     private var pathHasBeenManuallySet = false
 

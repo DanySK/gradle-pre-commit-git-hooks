@@ -6,7 +6,9 @@ import org.gradle.api.tasks.TaskProvider
 /**
  * Implements a Script DSL valid for any hook.
  */
-open class CommonScriptContext(override val name: String) : AbstractScriptContext() {
+open class CommonScriptContext(
+    override val name: String,
+) : AbstractScriptContext() {
     final override var script: String = ""
         private set
 

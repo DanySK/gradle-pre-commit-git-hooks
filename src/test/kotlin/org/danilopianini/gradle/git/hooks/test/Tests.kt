@@ -19,62 +19,64 @@ import java.io.File
 import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
 
-class Tests : StringSpec(
-    {
-        val scan =
-            ClassGraph()
-                .enableAllInfo()
-                .acceptPackages(Tests::class.java.`package`.name)
-                .scan()
-        scan.getResourcesWithLeafName("test.yaml")
-            .flatMap { resource ->
-                log.debug("Found test list in {}", resource)
-                val yamlFile = File(resource.classpathElementFile.absolutePath + "/" + resource.path)
-                val testConfiguration =
-                    Config {
-                        addSpec(Root)
-                    }.from.yaml.inputStream(resource.open())
-                testConfiguration[Root.tests].map { it to yamlFile.parentFile }
-            }
-            .forEach { (test, location) ->
-                log.debug("Test to be executed: {} from {}", test, location)
-                val testFolder =
-                    folder {
-                        location.copyRecursively(this.root)
+class Tests :
+    StringSpec(
+        {
+            val scan =
+                ClassGraph()
+                    .enableAllInfo()
+                    .acceptPackages(Tests::class.java.`package`.name)
+                    .scan()
+            scan
+                .getResourcesWithLeafName("test.yaml")
+                .flatMap { resource ->
+                    log.debug("Found test list in {}", resource)
+                    val yamlFile = File(resource.classpathElementFile.absolutePath + "/" + resource.path)
+                    val testConfiguration =
+                        Config {
+                            addSpec(Root)
+                        }.from.yaml.inputStream(resource.open())
+                    testConfiguration[Root.tests].map { it to yamlFile.parentFile }
+                }.forEach { (test, location) ->
+                    log.debug("Test to be executed: {} from {}", test, location)
+                    val testFolder =
+                        folder {
+                            location.copyRecursively(this.root)
+                        }
+                    log.debug("Test has been copied into {} and is ready to get executed", testFolder)
+                    test.description {
+                        test.configuration.pre_run_script.runCommandsIn(testFolder)
+                        val result =
+                            GradleRunner
+                                .create()
+                                .withProjectDir(testFolder.root)
+                                .withArguments(test.configuration.tasks + test.configuration.options)
+                                .withPluginClasspath()
+                                .run { if (test.expectation.failure.isEmpty()) build() else buildAndFail() }
+                        println(result.tasks)
+                        println(result.output)
+                        test.expectation.output_contains.forEach {
+                            result.output shouldContain it
+                        }
+                        test.expectation.success.forEach {
+                            result.outcomeOf(it) shouldBe TaskOutcome.SUCCESS
+                        }
+                        test.expectation.failure.forEach {
+                            result.outcomeOf(it) shouldBe TaskOutcome.FAILED
+                        }
+                        test.expectation.file_exists.forEach {
+                            val file =
+                                File("${testFolder.root.absolutePath}/${it.name}").apply {
+                                    shouldExist()
+                                    shouldBeAFile()
+                                }
+                            it.validate(file)
+                        }
+                        test.configuration.post_run_script.runCommandsIn(testFolder)
                     }
-                log.debug("Test has been copied into {} and is ready to get executed", testFolder)
-                test.description {
-                    test.configuration.pre_run_script.runCommandsIn(testFolder)
-                    val result =
-                        GradleRunner.create()
-                            .withProjectDir(testFolder.root)
-                            .withArguments(test.configuration.tasks + test.configuration.options)
-                            .withPluginClasspath()
-                            .run { if (test.expectation.failure.isEmpty()) build() else buildAndFail() }
-                    println(result.tasks)
-                    println(result.output)
-                    test.expectation.output_contains.forEach {
-                        result.output shouldContain it
-                    }
-                    test.expectation.success.forEach {
-                        result.outcomeOf(it) shouldBe TaskOutcome.SUCCESS
-                    }
-                    test.expectation.failure.forEach {
-                        result.outcomeOf(it) shouldBe TaskOutcome.FAILED
-                    }
-                    test.expectation.file_exists.forEach {
-                        val file =
-                            File("${testFolder.root.absolutePath}/${it.name}").apply {
-                                shouldExist()
-                                shouldBeAFile()
-                            }
-                        it.validate(file)
-                    }
-                    test.configuration.post_run_script.runCommandsIn(testFolder)
                 }
-            }
-    },
-) {
+        },
+    ) {
     companion object {
         val log: Logger = LoggerFactory.getLogger(Tests::class.java)
         private val shells = listOf("sh", "bash", "zsh", "fish", "csh", "ksh")
