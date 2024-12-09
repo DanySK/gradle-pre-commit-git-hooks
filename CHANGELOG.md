@@ -1,3 +1,35 @@
+## [2.0.16](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.15...2.0.16) (2024-12-09)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v2.1.0 ([#766](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/766)) ([2dabf89](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2dabf8944d15fd08ac4daf920615522c0ea79910))
+* **deps:** drop unused version from the Gradle catalog ([a77b861](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/a77b861e1b667776f1571ed158914a50aabfe1ba))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.116 ([#778](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/778)) ([72d6334](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/72d6334cc69b6bea330ffe5fbf3fd7e3e3c2a7ba))
+* **deps:** update node.js to 22.12 ([#770](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/770)) ([f2f9cd0](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/f2f9cd05d199c12200cb3dfaca5eb0e20b8c0946))
+* **deps:** update plugin kotlin-qa to v0.70.2 ([#758](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/758)) ([b93a8c2](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b93a8c227154c86a3830ffe56450978f2cb9b2d3))
+* **deps:** update plugin kotlin-qa to v0.75.0 ([#767](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/767)) ([c5a076d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c5a076d39879d8baab6875b8be3f6b3be0d332cb))
+* **deps:** update plugin kotlin-qa to v0.77.1 ([3f07233](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/3f072339d697b35bf3e571e6accbd9013d191d37))
+* **deps:** update plugin multijvmtesting to v2 ([#771](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/771)) ([1d17880](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1d17880d2f0efcbfb1351e0d57a9d7f877269bd2))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.15 ([#759](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/759)) ([1cc3da2](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1cc3da2f7fb296a5f2f813d66a9b244801c06565))
+* **deps:** update plugin org.gradle.toolchains.foojay-resolver-convention to v0.9.0 ([#768](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/768)) ([38f6f34](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/38f6f34ff55625d44da688506c44427971a74ad2))
+* **deps:** update plugin publishoncentral to v5.1.11 ([#760](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/760)) ([708202f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/708202f76d8c86a57bd2d0aecda80dd080cb4be9))
+* **deps:** update plugin publishoncentral to v6 ([#769](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/769)) ([bb38d25](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/bb38d25641264c5899aabcdbec1826f7274f972d))
+
+### Tests
+
+* disable commit signing when testing ([403ff70](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/403ff7086291a21c9002edab3b70666409370a95))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.23 ([#761](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/761)) ([8ea3a87](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8ea3a875bcb737ad1b8f02ece46515b42073e9bd))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.24 ([#773](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/773)) ([fa8e026](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fa8e0262b938d0441aa5995c370ad9d5d93487ba))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.5.25 ([#775](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/775)) ([3adc72d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/3adc72d77100bee744b0530d4b159e5bfe8103dd))
+* disambiguate the drop task name ([676853c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/676853c7603e1946dd7c7e01077de6a6f2a2ea26))
+* drop usage of deprecated `KOTLIN_VERSION` ([62b5235](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/62b5235b2b0aaf4d93f03e752388747195755980))
+* **release:** disambiguate the release task name ([b20c8ab](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b20c8ab93f4f3a2ed821e90fc33b4d7b92efdec5))
+* **release:** do not retry releases on failure ([528de7c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/528de7c3a8e7bf079d8abe68932476d45bd0d4ab))
+* suppress unstable api usage for plugin tags ([8ea7ce1](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8ea7ce13bea7a49106d8092e673f6740aaa0f9d5))
+
 ## [2.0.15](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.14...2.0.15) (2024-11-21)
 
 ### Dependency updates
