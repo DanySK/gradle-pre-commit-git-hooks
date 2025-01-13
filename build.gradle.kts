@@ -21,7 +21,7 @@ plugins {
 group = "org.danilopianini"
 description = "A Gradle plugin enforcing pre-commit and commit-msg Git hooks configuration. Conventional-commits-ready."
 
-inner class ProjectInfo {
+class ProjectInfo {
     val longName = "Gradle pre-commit Git Hooks"
     val website = "https://github.com/DanySK/$name"
     val vcsUrl = "$website.git"
