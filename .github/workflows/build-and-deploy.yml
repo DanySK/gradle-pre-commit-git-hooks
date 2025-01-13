@@ -17,12 +17,9 @@ jobs:
         with:
           deploy-command: >-
             ./gradlew
-            uploadKotlin
-            uploadPluginMavenToMavenCentralNexus
-            uploadGitHooksPluginMarkerMavenToMavenCentralNexus
-            close
-            dropStagingRepositoryOnMavenCentral
-            --parallel
+            uploadAll
+            closeStaging
+            dropStaging
           should-run-codecov: ${{ runner.os == 'Linux' }}
           codecov-token: ${{ secrets.CODECOV_TOKEN }}
           should-deploy: >-
