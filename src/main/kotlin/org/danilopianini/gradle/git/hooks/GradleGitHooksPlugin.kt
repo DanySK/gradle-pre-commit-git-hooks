@@ -21,6 +21,6 @@ open class GradleGitHooksPlugin : Plugin<Any> {
             }
             """.trimIndent()
         }
-        settings.extensions.create<GitHooksExtension>(GitHooksExtension.NAME, settings)
+        settings.extensions.create<GitHooksExtension>(GitHooksExtension.NAME, settings.settingsDir)
     }
 }
