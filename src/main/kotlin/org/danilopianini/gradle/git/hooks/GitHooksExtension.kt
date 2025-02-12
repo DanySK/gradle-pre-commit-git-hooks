@@ -9,10 +9,12 @@ import java.io.Serializable
  * DSL entry point, to be applied to [settings].gradle.kts.
  */
 open class GitHooksExtension(
-    val settings: Settings,
+    val repoRoot: File,
 ) : Serializable {
     private var hooks: Map<String, String> = emptyMap()
     private var pathHasBeenManuallySet = false
+
+    constructor(settings: Settings) : this(settings.rootDir)
 
     /**
      * The git repository root. If unset, it will be searched recursively from the project root towards the
