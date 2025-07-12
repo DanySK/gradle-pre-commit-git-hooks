@@ -1,7 +1,7 @@
 const publishCmd = `
 git tag -a -f \${nextRelease.version} \${nextRelease.version} -F CHANGELOG.md
 git push --force origin \${nextRelease.version}
-./gradlew uploadAll releaseStagingRepositoryOnMavenCentral || exit 1
+./gradlew publishAllPublicationsToProjectLocalRepository zipMavenCentralPortalPublication releaseMavenCentralPortalPublication || exit 1
 ./gradlew \
     publishPlugins \
     -Pgradle.publish.key=$GRADLE_PUBLISH_KEY \

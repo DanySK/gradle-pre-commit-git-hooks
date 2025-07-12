@@ -13,13 +13,17 @@ on:
   pull_request:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: ${{ !contains(github.ref, 'master') }}
+
 jobs:
   dispatcher:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: >-
       github.event_name != 'pull_request'
       || github.event.pull_request.head.repo.full_name != github.repository
-      || startsWith(github.head_ref, 'refs/heads/dependabot/')
+      || startsWith(github.head_ref, 'dependabot/')
     steps:
       - run: 'true'
   ci-cd:
