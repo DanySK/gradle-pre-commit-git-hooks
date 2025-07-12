@@ -8,36 +8,58 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows, macos, ubuntu]
-    runs-on: ${{ matrix.os }}-latest
+        os: [ windows-2025, macos-14, ubuntu-24.04 ]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
         uses: DanySK/action-checkout@0.2.22
+      - name: Determine dry-run flag
+        id: check_branch
+        shell: bash
+        run: |
+          ruby << 'RUBY' >> $GITHUB_OUTPUT
+            branch = ENV['GITHUB_REF'].sub(/^refs\/heads\//, '')
+            keywords = %w[gradle kotlin publish release deploy]
+            dry = keywords.any? { |kw| branch.include?(kw) } ? '' : '--dry-run'
+            puts "dry_run=#{dry}"
+          RUBY
       - uses: DanySK/build-check-deploy-gradle-action@4.0.1
         with:
+          # Dry-deployment
           deploy-command: >-
             ./gradlew
-            uploadAll
-            closeStaging
-            dropStaging
+            publishAllPublicationsToProjectLocalRepository
+            zipMavenCentralPortalPublication
+            releaseMavenCentralPortalPublication
+            ${{ steps.check_branch.outputs.dry_run }}
           should-run-codecov: ${{ runner.os == 'Linux' }}
           codecov-token: ${{ secrets.CODECOV_TOKEN }}
           should-deploy: >-
             ${{
             runner.os == 'Linux'
-            && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+            && !github.event.repository.fork
+              && (
+                github.event_name != 'pull_request'
+                || github.event.pull_request.head.repo.full_name == github.repository
+              )
             }}
           maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
           signing-key: ${{ secrets.SIGNING_KEY }}
           signing-password: ${{ secrets.SIGNING_PASSWORD }}
   release:
+    permissions:
+      contents: write
+      packages: write
     needs:
       - build
-    runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
-    concurrency:
-      group: release
+    runs-on: ubuntu-24.04
+    if: >-
+      !github.event.repository.fork
+      && (
+        github.event_name != 'pull_request'
+        || github.event.pull_request.head.repo.full_name == github.repository
+      )
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
@@ -66,15 +88,15 @@ jobs:
           signing-key: ${{ secrets.SIGNING_KEY }}
           signing-password: ${{ secrets.SIGNING_PASSWORD }}
   success:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs:
-      - build
       - release
+      - build
     if: >-
       always() && (
         contains(join(needs.*.result, ','), 'failure')
         || !contains(join(needs.*.result, ','), 'cancelled')
       )
     steps:
-      - name: Verify that the workflow executed and there were no failures
+      - name: Verify that there were no failures
         run: ${{ !contains(join(needs.*.result, ','), 'failure') }}
