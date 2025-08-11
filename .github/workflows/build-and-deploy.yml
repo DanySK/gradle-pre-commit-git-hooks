@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
-        uses: DanySK/action-checkout@0.2.22
+        uses: DanySK/action-checkout@0.2.23
       - name: Determine dry-run flag
         id: check_branch
         shell: bash
