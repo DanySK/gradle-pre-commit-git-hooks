@@ -2,7 +2,6 @@
 
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     `java-gradle-plugin`
     alias(libs.plugins.dokka)
@@ -48,6 +47,7 @@ dependencies {
     api(gradleKotlinDsl())
     api(kotlin("stdlib-jdk8"))
     testImplementation(gradleTestKit())
+    testImplementation(libs.apache.commons.lang3)
     testImplementation(libs.konf.yaml)
     testImplementation(libs.classgraph)
     testImplementation(libs.bundles.kotlin.testing)

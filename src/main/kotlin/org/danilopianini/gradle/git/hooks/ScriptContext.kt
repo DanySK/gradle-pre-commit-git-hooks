@@ -1,9 +1,9 @@
 package org.danilopianini.gradle.git.hooks
 
-import org.gradle.api.Task
-import org.gradle.api.tasks.TaskProvider
 import java.io.File
 import java.net.URL
+import org.gradle.api.Task
+import org.gradle.api.tasks.TaskProvider
 
 /**
  * Collects the DSL elements for defining scripts.
@@ -43,52 +43,36 @@ interface ScriptContext {
      * Generates a script with either the provided [shebang] or with a shebang invoking bash,
      * and with the result of the provided function.
      */
-    fun from(
-        shebang: String? = "#!/usr/bin/env bash",
-        script: () -> String,
-    )
+    fun from(shebang: String? = "#!/usr/bin/env bash", script: () -> String)
 
     /**
      * Adds the provided tasks to the script, by invoking `./gradlew <taskname>`.
      * By default, a failure of the task implies a failure of the commit.
      * To run a task without considering the failure critical, pass `[requireSuccess] = false`.
      */
-    fun tasks(
-        name: String,
-        vararg otherNames: String,
-        requireSuccess: Boolean = true,
-    ) = tasks(name as Any, *otherNames, requireSuccess = requireSuccess)
+    fun tasks(name: String, vararg otherNames: String, requireSuccess: Boolean = true) =
+        tasks(name as Any, *otherNames, requireSuccess = requireSuccess)
 
     /**
      * Adds the provided tasks to the script, by invoking `./gradlew <taskname>`.
      * By default, a failure of the task implies a failure of the commit.
      * To run a task without considering the failure critical, pass `[requireSuccess] = false`.
      */
-    fun tasks(
-        task: Task,
-        vararg otherTasks: Task,
-        requireSuccess: Boolean = true,
-    ) = tasks(task as Any, *otherTasks, requireSuccess = requireSuccess)
+    fun tasks(task: Task, vararg otherTasks: Task, requireSuccess: Boolean = true) =
+        tasks(task as Any, *otherTasks, requireSuccess = requireSuccess)
 
     /**
      * Adds the provided tasks to the script, by invoking `./gradlew <taskname>`.
      * By default, a failure of the task implies a failure of the commit.
      * To run a task without considering the failure critical, pass `[requireSuccess] = false`.
      */
-    fun tasks(
-        task: TaskProvider<*>,
-        vararg otherTasks: TaskProvider<*>,
-        requireSuccess: Boolean = true,
-    ) = tasks(task as Any, *otherTasks, requireSuccess = requireSuccess)
+    fun tasks(task: TaskProvider<*>, vararg otherTasks: TaskProvider<*>, requireSuccess: Boolean = true) =
+        tasks(task as Any, *otherTasks, requireSuccess = requireSuccess)
 
     /**
      * Adds the provided tasks to the script, by invoking `./gradlew <taskname>`.
      * By default, a failure of the task implies a failure of the commit.
      * To run a task without considering the failure critical, pass `[requireSuccess] = false`.
      */
-    fun tasks(
-        first: Any,
-        vararg others: Any,
-        requireSuccess: Boolean = true,
-    )
+    fun tasks(first: Any, vararg others: Any, requireSuccess: Boolean = true)
 }

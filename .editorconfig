@@ -1,2 +1,16 @@
 [*.{kt,kts}]
-max_line_length=120
+indent_size=4
+insert_final_newline = true
+ij_kotlin_imports_layout=*
+ktlint_code_style=intellij_idea
+ktlint_function_naming_ignore_when_annotated_with = Composable
+max_line_length = 120
+
+# Do not apply the general rule to generated files
+[**/generated/**/*.{kt,kts}]
+indent_size = unset
+max_line_length = unset
+insert_final_newline = unset
+
+[**/*{t,T}est/kotlin/**.kt]
+ktlint_standard_class-signature = disabled
