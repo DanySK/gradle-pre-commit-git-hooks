@@ -1,3 +1,23 @@
+## [2.0.30](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.29...2.0.30) (2025-08-16)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v9 ([#944](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/944)) ([77ac8f0](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/77ac8f0a24f6e3ce18ab6b9519b662e4772654db))
+* **deps:** update plugin gitsemver to v6.0.1 ([#962](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/962)) ([873f1ca](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/873f1ca630d2715f342d6d02c70edcb63620fcf9))
+* **deps:** update plugin kotlin-qa to v0.93.1 ([#960](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/960)) ([4f5492c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/4f5492cd97ae51e06059e50548c7e59e74df5eea))
+* **deps:** update plugin kotlin-qa to v0.93.2 ([#965](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/965)) ([948e33d](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/948e33de6759431d7b320f854183a99f7cde7c7a))
+* **deps:** update plugin multijvmtesting to v4.0.3 ([#963](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/963)) ([8df35c9](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8df35c9e7ad84bce14509e52b7b9679968bc8979))
+* **deps:** update plugin multijvmtesting to v4.1.0 ([#964](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/964)) ([2c8cdd7](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2c8cdd77d8fd94044d9174e3dd77b172b979b549))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.29 ([#961](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/961)) ([c3c3589](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c3c3589fbdb2717e48aaf12e1f50b26cfdb5fc4a))
+
+### Bug Fixes
+
+* set the same java requirement Gradle has ([051b305](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/051b3051c31a447b22fcaac494a2c72bb2b7f1e7))
+
+### General maintenance
+
+* drop Gradle's internal `TemporaryFolder` and import the ktlint style file from Alchemist ([fc30f64](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/fc30f647bd9a5ef992e5c471878fad62cc485cbb))
+
 ## [2.0.29](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.0.28...2.0.29) (2025-08-14)
 
 ### Dependency updates
