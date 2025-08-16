@@ -6,9 +6,7 @@ import org.gradle.api.tasks.TaskProvider
 /**
  * Implements a Script DSL valid for any hook.
  */
-open class CommonScriptContext(
-    override val name: String,
-) : AbstractScriptContext() {
+open class CommonScriptContext(override val name: String) : AbstractScriptContext() {
     final override var script: String = ""
         private set
 
@@ -29,10 +27,7 @@ open class CommonScriptContext(
         this.script += script() + '\n'
     }
 
-    final override fun from(
-        shebang: String?,
-        script: () -> String,
-    ) {
+    final override fun from(shebang: String?, script: () -> String) {
         require(this.script.isEmpty()) {
             """
             The $name git hook is being defined twice, and this is likely an error. Formerly:
@@ -50,10 +45,7 @@ open class CommonScriptContext(
         this.script = (shebang?.takeIf { it.isNotBlank() }?.let { "$it\n" }.orEmpty()) + script()
     }
 
-    final override fun processTasks(
-        vararg tasks: Any,
-        requireSuccess: Boolean,
-    ) {
+    final override fun processTasks(vararg tasks: Any, requireSuccess: Boolean) {
         val names =
             tasks.map { task ->
                 when (task) {

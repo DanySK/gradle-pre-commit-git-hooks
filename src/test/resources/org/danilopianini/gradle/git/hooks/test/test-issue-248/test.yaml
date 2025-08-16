@@ -10,5 +10,4 @@ tests:
           content: |
             #!/bin/sh
             true
-
           permissions: X

@@ -1,16 +1,14 @@
 package org.danilopianini.gradle.git.hooks
 
-import org.gradle.api.initialization.Settings
-import org.gradle.api.logging.Logging
 import java.io.File
 import java.io.Serializable
+import org.gradle.api.initialization.Settings
+import org.gradle.api.logging.Logging
 
 /**
  * DSL entry point, to be applied to [settings].gradle.kts.
  */
-open class GitHooksExtension(
-    repoRoot: File,
-) : Serializable {
+open class GitHooksExtension(repoRoot: File) : Serializable {
     private var hooks: Map<String, String> = emptyMap()
     private var pathHasBeenManuallySet = false
 
@@ -20,7 +18,7 @@ open class GitHooksExtension(
      * The git repository root. If unset, it will be searched recursively from the project root towards the
      * filesystem root.
      */
-    var repoRoot: File = settings.settingsDir
+    var repoRoot: File = repoRoot
         set(value) {
             require(value.isGitRoot()) {
                 "${value.absolutePath} is not a valid git root (it must contain a .git folder)"
@@ -43,10 +41,7 @@ open class GitHooksExtension(
 
     private val gitDir get() = File(repoRoot, ".git")
 
-    private inline fun <H : ScriptContext> hook(
-        context: H,
-        configuration: H.() -> Unit,
-    ) {
+    private inline fun <H : ScriptContext> hook(context: H, configuration: H.() -> Unit) {
         require(!hooks.containsKey(context.name)) {
             "it looks like the hook ${context.name} is being defined twice"
         }
@@ -56,10 +51,8 @@ open class GitHooksExtension(
     /**
      * Defines a new hook with an arbitrary name.
      */
-    fun hook(
-        hookName: String,
-        configuration: ScriptContext.() -> Unit,
-    ) = hook(CommonScriptContext(hookName), configuration)
+    fun hook(hookName: String, configuration: ScriptContext.() -> Unit) =
+        hook(CommonScriptContext(hookName), configuration)
 
     /**
      * Pre-commit hook.
@@ -163,9 +156,8 @@ open class GitHooksExtension(
             setExecutable(true)
         }
 
-        private fun File.isGitRoot(): Boolean =
-            listFiles()
-                ?.any { file -> file.name == ".git" }
-                ?: false
+        private fun File.isGitRoot(): Boolean = listFiles()
+            ?.any { file -> file.name == ".git" }
+            ?: false
     }
 }
