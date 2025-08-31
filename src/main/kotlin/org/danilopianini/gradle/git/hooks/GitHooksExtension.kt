@@ -8,15 +8,17 @@ import org.gradle.api.logging.Logging
 /**
  * DSL entry point, to be applied to [settings].gradle.kts.
  */
-open class GitHooksExtension(val settings: Settings) : Serializable {
+open class GitHooksExtension(repoRoot: File) : Serializable {
     private var hooks: Map<String, String> = emptyMap()
     private var pathHasBeenManuallySet = false
+
+    constructor(settings: Settings) : this(settings.rootDir)
 
     /**
      * The git repository root. If unset, it will be searched recursively from the project root towards the
      * filesystem root.
      */
-    var repoRoot: File = settings.settingsDir
+    var repoRoot: File = repoRoot
         set(value) {
             require(value.isGitRoot()) {
                 "${value.absolutePath} is not a valid git root (it must contain a .git folder)"
