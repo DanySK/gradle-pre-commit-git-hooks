@@ -16,7 +16,7 @@ kotlin-testing = [ "kotest-junit5-jvm", "kotest-assertions-core-jvm" ]
 
 [plugins]
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
-gitSemVer = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "7.0.2" }
+gitSemVer = { id = "org.danilopianini.git-sensitive-semantic-versioning", version = "7.0.3" }
 gradlePluginPublish = { id = "com.gradle.plugin-publish", version = "2.0.0" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.94.1" }
