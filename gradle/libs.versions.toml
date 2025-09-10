@@ -2,7 +2,7 @@
 dokka = "2.0.0"
 konf = "1.1.2"
 kotest = "6.0.3"
-kotlin = "2.2.10"
+kotlin = "2.2.20"
 
 [libraries]
 apache-commons-lang3 = "org.apache.commons:commons-lang3:3.18.0"
