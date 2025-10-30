@@ -1,6 +1,6 @@
 plugins {
     id("com.gradle.develocity") version "4.2.2"
-    id("org.danilopianini.gradle-pre-commit-git-hooks") version "2.1.3"
+    id("org.danilopianini.gradle-pre-commit-git-hooks") version "2.1.4"
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
