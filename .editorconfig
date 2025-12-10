@@ -1,9 +1,12 @@
 [*.{kt,kts}]
-indent_size=4
+indent_size = 4
 insert_final_newline = true
-ij_kotlin_imports_layout=*
-ktlint_code_style=intellij_idea
+ij_kotlin_imports_layout = *
+ij_kotlin_line_break_after_multiline_when_entry = false
+ktlint_code_style = intellij_idea
 ktlint_function_naming_ignore_when_annotated_with = Composable
+ktlint_standard_blank-line-between-when-conditions = disabled
+ktlint_standard_mixed-condition-operators = disabled
 max_line_length = 120
 
 # Do not apply the general rule to generated files
