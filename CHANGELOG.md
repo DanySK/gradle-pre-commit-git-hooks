@@ -1,3 +1,18 @@
+## [2.1.9](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.8...2.1.9) (2026-02-05)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v2.3.10 ([#1108](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1108)) ([e6458f0](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e6458f03213fdea0d6db05639b0bac697f315984))
+* **deps:** update plugin gitsemver to v7.0.11 ([#1102](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1102)) ([49fa7c5](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/49fa7c5f3980a50a76bd9ddadfd0ed1e71f89927))
+* **deps:** update plugin kotlin-qa to v0.100.3 ([#1104](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1104)) ([1761e3c](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1761e3cb7e9ce2eee0b91b5317a058fcfce2bdf7))
+* **deps:** update plugin kotlin-qa to v0.101.0 ([#1106](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1106)) ([804cac8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/804cac826784d95dba421e70012a99aaebe638c6))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.8 ([#1103](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1103)) ([99be759](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/99be75925bb944c4c443151386cdf212a9b4c8da))
+* **deps:** update plugin publishoncentral to v9.1.12 ([#1105](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1105)) ([db393b1](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/db393b15d81e6bbbb686383d8f04f4409294ea17))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.23 ([#1107](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1107)) ([9984244](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/9984244b8a562cac7075020a1ba3ccf40bb7efe2))
+
 ## [2.1.8](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.7...2.1.8) (2026-01-29)
 
 ### Dependency updates
