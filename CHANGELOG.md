@@ -1,3 +1,13 @@
+## [2.1.14](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.13...2.1.14) (2026-04-19)
+
+### Dependency updates
+
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.13 ([#1155](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1155)) ([383a7eb](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/383a7eb88ee6542e264bb861acb05359e426f0b2))
+
+### Documentation
+
+* **deps:** update dependency org.jetbrains.dokka to v2.2.0 ([#1143](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1143)) ([be97e8f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/be97e8f45e0951242e842de2c50a70a4d4d53391))
+
 ## [2.1.13](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.12...2.1.13) (2026-04-19)
 
 ### Dependency updates
