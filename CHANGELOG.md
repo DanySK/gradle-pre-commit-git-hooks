@@ -1,3 +1,26 @@
+## [2.1.22](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.21...2.1.22) (2026-08-07)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.7.0 ([#1240](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1240)) ([afad4f2](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/afad4f2844787825aeee055df4236e0e4aac8736))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.185 ([#1235](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1235)) ([2af4a70](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/2af4a706b0c491d04a3afce5edc9e6da4201ce82))
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.186 ([#1236](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1236)) ([619f7ab](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/619f7ab8b7e0f104c76e604cd6dafafbdbf047fd))
+* **deps:** update kotest to v6.2.3 ([#1234](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1234)) ([c800863](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c80086343306cf72e9260e394ae80eb5b0d0566e))
+* **deps:** update node.js to 24.19 ([#1239](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1239)) ([08d33a8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/08d33a8561c25f7bef22e6f90432e5545bf80ad5))
+* **deps:** update plugin gitsemver to v7.0.23 ([#1230](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1230)) ([e802b36](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/e802b361df39e01baefbd0d912f782ecece83db9))
+* **deps:** update plugin multijvmtesting to v4.5.4 ([#1227](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1227)) ([0a2e503](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/0a2e503c337257a3ae323953a0159e6c1aaf85dd))
+* **deps:** update plugin multijvmtesting to v4.5.5 ([#1241](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1241)) ([8e64d9a](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8e64d9af04130b5d3fd44c0e6dcb7a3d8d6b43da))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.1.21 ([#1228](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1228)) ([31be9e8](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/31be9e8979335debc023fba7947b106150b08c8d))
+* **deps:** update plugin publishoncentral to v9.2.8 ([#1229](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1229)) ([24dd3ec](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/24dd3ec2a7718a5ba1a471317c402761ba9a30b5))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v7.0.1 ([#1232](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1232)) ([ae7f2d1](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/ae7f2d114c962229a7924bdfcc0360c856a8aa14))
+* **deps:** update danysk/action-checkout action to v0.2.31 ([#1233](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1233)) ([56fa879](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/56fa879e398eff7e5362300d1802f2b613fd0929))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.41 ([#1231](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1231)) ([62077fc](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/62077fc4f80cc85f3ff83ca5b434d5df2c1ed157))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.42 ([#1237](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1237)) ([10cd04e](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/10cd04e068e691e93631bd65ce215a32545a1e7f))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.43 ([#1238](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1238)) ([13cf038](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/13cf0384fa6637d048ec82f30e97135724722815))
+
 ## [2.1.21](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.20...2.1.21) (2026-07-14)
 
 ### Dependency updates
