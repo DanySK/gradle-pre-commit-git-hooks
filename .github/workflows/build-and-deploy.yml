@@ -53,7 +53,7 @@ jobs:
       packages: write
     needs:
       - build
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     if: >-
       !github.event.repository.fork
       && (
@@ -88,7 +88,7 @@ jobs:
           signing-key: ${{ secrets.SIGNING_KEY }}
           signing-password: ${{ secrets.SIGNING_PASSWORD }}
   success:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs:
       - release
       - build
