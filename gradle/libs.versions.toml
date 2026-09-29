@@ -5,7 +5,7 @@ kotest = "6.2.5"
 kotlin = "2.4.20"
 
 [libraries]
-apache-commons-lang3 = "org.apache.commons:commons-lang3:3.20.0"
+apache-commons-lang3 = "org.apache.commons:commons-lang3:3.21.0"
 classgraph = "io.github.classgraph:classgraph:4.8.196"
 konf-yaml = { module = "com.uchuhimo:konf-yaml", version.ref = "konf" }
 kotest-junit5-jvm = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
