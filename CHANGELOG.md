@@ -1,3 +1,19 @@
+## [2.1.29](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.28...2.1.29) (2026-11-06)
+
+### Dependency updates
+
+* **deps:** update dependency io.github.classgraph:classgraph to v4.8.200 ([#1315](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1315)) ([9d122d1](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/9d122d16d4583112f165532682fc421b940ba327))
+* **deps:** update node.js to v26 ([b5c7dfc](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b5c7dfcb6d0f733648723386e1b9bdbd698d7664))
+
+### Documentation
+
+* **deps:** update dependency org.jetbrains.dokka to v2.3.0 ([#1317](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1317)) ([1d0581f](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/1d0581fd42d6a15e106370ca2e62b35557db9993))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.50 ([#1312](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1312)) ([8f729b7](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/8f729b7638e71b2b5d94c2c42cc40c0dc5772765))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.51 ([eb0f2df](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/eb0f2df286abdafa4061575659ea3a2a78ad9062))
+
 ## [2.1.28](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.27...2.1.28) (2026-10-21)
 
 ### Dependency updates
