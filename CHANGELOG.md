@@ -1,3 +1,11 @@
+## [2.1.31](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.30...2.1.31) (2026-11-11)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.9.1 ([#1321](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1321)) ([4bf5c5b](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/4bf5c5b5eaf4e77d81f46a6a73c6fb8ddd77bdfe))
+* **deps:** update plugin publishoncentral to v9.3.1 ([#1320](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1320)) ([b6cbe2e](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/b6cbe2ec1600ff6c1cfe81f60bb36acb3e56c310))
+* **deps:** update plugin publishoncentral to v9.3.2 ([#1322](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1322)) ([67ecfa7](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/67ecfa76f715e6153f375e198306c5597978d34f))
+
 ## [2.1.30](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.29...2.1.30) (2026-11-06)
 
 ### Dependency updates
