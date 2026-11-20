@@ -1,3 +1,16 @@
+## [2.1.32](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.31...2.1.32) (2026-11-20)
+
+### Dependency updates
+
+* **core-deps:** update gradle to v9.9.2 ([#1327](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1327)) ([ed7be90](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/ed7be905e61c8d98f41fc4ce57a5d0aa69a60ae7))
+* **deps:** update dependency org.apache.commons:commons-lang3 to v3.22.0 ([#1324](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1324)) ([c4c38d7](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/c4c38d7d7bccb09b36dfc1cda8e16fde85228dae))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.159 ([#1326](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1326)) ([42dccb4](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/42dccb40adfbdf1b55523bd21b8c4ced5df9ee85))
+* **deps:** update kotest to v6.2.7 ([#1323](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1323)) ([4b43e5e](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/4b43e5ece83fc41759da83417aaad75775595aa4))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v4.0.52 ([#1325](https://github.com/DanySK/gradle-pre-commit-git-hooks/issues/1325)) ([a6431d9](https://github.com/DanySK/gradle-pre-commit-git-hooks/commit/a6431d912cefb7fb3f474a16f359f67f55b721cb))
+
 ## [2.1.31](https://github.com/DanySK/gradle-pre-commit-git-hooks/compare/2.1.30...2.1.31) (2026-11-11)
 
 ### Dependency updates
